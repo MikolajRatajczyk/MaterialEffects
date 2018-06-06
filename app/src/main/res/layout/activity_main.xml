@@ -48,7 +48,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.085" />
+                app:layout_constraintVertical_bias="0.085"
+                android:elevation="4dp"/>
 
             <TextView
                 android:id="@+id/textView2"
@@ -76,7 +77,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.401" />
+                app:layout_constraintVertical_bias="0.401"
+                android:elevation="8dp"/>
 
             <TextView
                 android:id="@+id/textView3"
