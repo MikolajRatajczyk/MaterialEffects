@@ -43,13 +43,13 @@
                 android:layout_marginEnd="8dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
+                android:elevation="4dp"
                 android:text="Ripple effect"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.085"
-                android:elevation="4dp"/>
+                app:layout_constraintVertical_bias="0.085" />
 
             <TextView
                 android:id="@+id/textView2"
@@ -71,14 +71,14 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:background="@drawable/shape_rectangle_green_ripple"
+                android:elevation="8dp"
                 android:text="Custom button"
                 android:textColor="@android:color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.401"
-                android:elevation="8dp"/>
+                app:layout_constraintVertical_bias="0.401" />
 
             <TextView
                 android:id="@+id/textView3"
@@ -101,6 +101,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:elevation="2dp"
+                android:stateListAnimator="@animator/animator_button_raise"
                 android:text="Custom raise effect"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
