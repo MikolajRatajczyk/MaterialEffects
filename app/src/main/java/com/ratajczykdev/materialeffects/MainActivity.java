@@ -10,6 +10,7 @@ public class MainActivity extends AppCompatActivity
 {
 
     private Button buttonButtons;
+    private Button buttonConstraintLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -24,6 +25,17 @@ public class MainActivity extends AppCompatActivity
             public void onClick(View view)
             {
                 Intent intent = new Intent(MainActivity.this, ButtonsActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        buttonConstraintLayout = findViewById(R.id.main_activity_constraint_layout_button);
+        buttonConstraintLayout.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+                Intent intent = new Intent(MainActivity.this, ConstraintLayoutActivity.class);
                 startActivity(intent);
             }
         });
