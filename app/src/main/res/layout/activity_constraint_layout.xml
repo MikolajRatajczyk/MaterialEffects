@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ConstraintLayoutActivity">
+    tools:context=".ConstraintLayoutActivity"
+    android:id="@+id/constraint_layout_activity_root">
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -25,7 +26,7 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/constraint_layout_activity_title_textview"
+                android:id="@+id/constraint_layout_activity_visibility_title_textview"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
@@ -52,7 +53,7 @@
                 app:layout_constraintHorizontal_bias="0.502"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.191" />
+                app:layout_constraintVertical_bias="0.086" />
 
             <TextView
                 android:id="@+id/constraint_layout_activity_simple_textview"
@@ -89,13 +90,41 @@
                 android:elevation="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/constraint_layout_activity_title_textview" />
+                app:layout_constraintTop_toBottomOf="@+id/constraint_layout_activity_visibility_title_textview" />
 
             <android.support.constraint.Group
                 android:id="@+id/constraint_layout_activity_items_group"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:constraint_referenced_ids="constraint_layout_activity_simple_button,constraint_layout_activity_simple_textview,constraint_layout_activity_parrot_image" />
+
+            <TextView
+                android:id="@+id/constraint_layout_activity_placeholder_title_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="376dp"
+                android:text="Dynamically replace the content of the Placeholder"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/constraint_layout_activity_change_content_button"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:text="Change content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <!--TODO: make replacement more visible to user-->
+            <include layout="@layout/placeholder_image_template" />
 
         </android.support.constraint.ConstraintLayout>
     </FrameLayout>
