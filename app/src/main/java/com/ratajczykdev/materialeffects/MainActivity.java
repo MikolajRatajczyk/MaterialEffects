@@ -47,6 +47,7 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View view)
             {
+                //  TODO: make exit MainActivity animation
                 Intent intent = new Intent(MainActivity.this, MotionActivity.class);
                 startActivity(intent);
             }
