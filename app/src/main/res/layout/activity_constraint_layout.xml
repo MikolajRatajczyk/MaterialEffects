@@ -42,13 +42,17 @@
                 style="@style/Widget.AppCompat.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="88dp"
                 android:text="Simple button"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.502"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/constraint_layout_activity_title_textview" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.191" />
 
             <TextView
                 android:id="@+id/constraint_layout_activity_simple_textview"
@@ -63,7 +67,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/constraint_layout_activity_simple_button" />
 
             <ImageView
-                android:id="@+id/constraint_layout_acitvity_parrot_image"
+                android:id="@+id/constraint_layout_activity_parrot_image"
                 android:layout_width="0dp"
                 android:layout_height="100dp"
                 android:layout_marginEnd="16dp"
@@ -74,6 +78,26 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/constraint_layout_activity_simple_textview"
                 app:srcCompat="@drawable/image_parrot_green" />
+
+            <Spinner
+                android:id="@+id/constraint_layout_activity_visibility_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:elevation="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraint_layout_activity_title_textview" />
+
+            <android.support.constraint.Group
+                android:id="@+id/constraint_layout_activity_items_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="constraint_layout_activity_simple_button,constraint_layout_activity_simple_textview,constraint_layout_activity_parrot_image" />
+
         </android.support.constraint.ConstraintLayout>
     </FrameLayout>
+
 </android.support.constraint.ConstraintLayout>
