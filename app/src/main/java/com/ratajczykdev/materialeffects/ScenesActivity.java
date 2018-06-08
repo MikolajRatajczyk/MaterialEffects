@@ -3,6 +3,8 @@ package com.ratajczykdev.materialeffects;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.transition.Scene;
+import android.transition.Transition;
+import android.transition.TransitionInflater;
 import android.transition.TransitionManager;
 import android.view.View;
 import android.widget.ImageButton;
@@ -21,14 +23,17 @@ public class ScenesActivity extends AppCompatActivity
 
         linearLayoutRoot = findViewById(R.id.scenes_activity_root);
 
+        //  for custom transition
+        final Transition transition = TransitionInflater.from(ScenesActivity.this).inflateTransition(R.transition.transition_activity_scenes_default_to_detailed);
+
         imageButtonInfo = findViewById(R.id.scenes_activity_fox_info_imagebutton);
         imageButtonInfo.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View view)
             {
-                //  default transition
-                TransitionManager.go(Scene.getSceneForLayout(linearLayoutRoot, R.layout.activity_scenes_detailed, ScenesActivity.this));
+                //  custom transition between scenes
+                TransitionManager.go(Scene.getSceneForLayout(linearLayoutRoot, R.layout.activity_scenes_detailed, ScenesActivity.this),transition );
             }
         });
 

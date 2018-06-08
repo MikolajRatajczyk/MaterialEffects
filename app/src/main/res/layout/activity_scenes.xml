@@ -2,11 +2,11 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scenes_activity_root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ScenesActivity"
     android:orientation="vertical"
-    android:id="@+id/scenes_activity_root">
+    tools:context=".ScenesActivity">
 
     <ImageView
         android:id="@+id/scenes_activity_fox_image"
@@ -17,6 +17,7 @@
         app:srcCompat="@drawable/image_fox" />
 
     <android.support.constraint.ConstraintLayout
+        android:id="@+id/scenes_activity_bar_root"
         android:layout_width="match_parent"
         android:layout_height="176dp">
 

@@ -2,14 +2,14 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scenes_activity_detailed_root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ScenesActivity"
     android:orientation="vertical"
-    android:id="@+id/scenes_activity_detailed_root">
+    tools:context=".ScenesActivity">
 
     <ImageView
-        android:id="@+id/scenes_activity_detailed_fox_image"
+        android:id="@+id/scenes_activity_fox_image"
         android:layout_width="240dp"
         android:layout_height="120dp"
         android:layout_marginBottom="32dp"
@@ -20,6 +20,7 @@
         app:srcCompat="@drawable/image_fox" />
 
     <android.support.constraint.ConstraintLayout
+        android:id="@+id/scenes_activity_bar_root"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
@@ -59,6 +60,7 @@
             android:layout_marginTop="8dp"
             android:text="The red fox originated from smaller-sized ancestors from Eurasia during the Middle Villafranchian period, and colonised North America shortly after the Wisconsin glaciation. Among the true foxes, the red fox represents a more progressive form in the direction of carnivory. Apart from its large size, the red fox is distinguished from other fox species by its ability to adapt quickly to new environments. Despite its name, the species often produces individuals with other colourings, including albinos and melanists. Forty-five subspecies are currently recognised, which are divided into two categories: the large northern foxes, and the small, basal southern foxes of Asia and North Africa."
             android:textAlignment="viewStart"
+            android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/scenes_activity_fox_short_description_textview"
