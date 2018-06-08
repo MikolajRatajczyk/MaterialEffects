@@ -5,18 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ScenesActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:id="@+id/scenes_activity_detailed_root">
 
     <ImageView
-        android:id="@+id/scenes_activity_fox_image"
+        android:id="@+id/scenes_activity_detailed_fox_image"
         android:layout_width="240dp"
         android:layout_height="120dp"
-        android:scaleType="centerCrop"
-        app:srcCompat="@drawable/image_fox"
-        android:layout_marginTop="16dp"
+        android:layout_marginBottom="32dp"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
-        android:layout_marginBottom="32dp"/>
+        android:layout_marginTop="16dp"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/image_fox" />
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
@@ -24,7 +25,7 @@
         android:layout_weight="1">
 
         <TextView
-            android:id="@+id/scenes_activity_fox_title_textview"
+            android:id="@+id/scenes_activity_detailed_fox_title_textview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -36,7 +37,7 @@
             app:layout_constraintVertical_chainStyle="spread" />
 
         <TextView
-            android:id="@+id/scenes_activity_fox_description_textview"
+            android:id="@+id/scenes_activity_detailed_fox_short_description_textview"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
@@ -46,11 +47,11 @@
             android:textColor="@color/colorAccent"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/scenes_activity_fox_title_textview"
-            app:layout_constraintTop_toBottomOf="@+id/scenes_activity_fox_title_textview" />
+            app:layout_constraintStart_toStartOf="@+id/scenes_activity_detailed_fox_title_textview"
+            app:layout_constraintTop_toBottomOf="@+id/scenes_activity_detailed_fox_title_textview" />
 
         <TextView
-            android:id="@+id/textView5"
+            android:id="@+id/scenes_activity_detailed_fox_full_description_textview"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginBottom="16dp"
@@ -60,18 +61,18 @@
             android:textAlignment="viewStart"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/scenes_activity_fox_description_textview"
-            app:layout_constraintTop_toBottomOf="@+id/scenes_activity_fox_description_textview" />
+            app:layout_constraintStart_toStartOf="@+id/scenes_activity_detailed_fox_short_description_textview"
+            app:layout_constraintTop_toBottomOf="@+id/scenes_activity_detailed_fox_short_description_textview" />
 
         <ImageButton
-            android:id="@+id/scenes_activity_fox_info_button"
+            android:id="@+id/scenes_activity_detailed_fox_close_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
             android:background="?android:selectableItemBackground"
-            app:layout_constraintBottom_toBottomOf="@+id/scenes_activity_fox_title_textview"
+            app:layout_constraintBottom_toBottomOf="@+id/scenes_activity_detailed_fox_title_textview"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/scenes_activity_fox_title_textview"
+            app:layout_constraintTop_toTopOf="@+id/scenes_activity_detailed_fox_title_textview"
             app:srcCompat="@drawable/ic_close_black" />
 
     </android.support.constraint.ConstraintLayout>
