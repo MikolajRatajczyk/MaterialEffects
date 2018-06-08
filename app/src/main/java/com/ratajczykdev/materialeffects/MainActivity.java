@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
-        buttonMotion = findViewById(R.id.activity_main_motion_button);
+        buttonMotion = findViewById(R.id.main_activity_motion_button);
         buttonMotion.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
-        buttonScenes = findViewById(R.id.activity_main_scenes_button);
+        buttonScenes = findViewById(R.id.main_activity_scenes_button);
         buttonScenes.setOnClickListener(new View.OnClickListener()
         {
             @Override
