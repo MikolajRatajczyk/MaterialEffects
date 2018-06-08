@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MotionActivity">
+    tools:context=".MotionActivity"
+    android:id="@+id/activity_motion_root">
 
     <FrameLayout
         android:layout_width="match_parent"
