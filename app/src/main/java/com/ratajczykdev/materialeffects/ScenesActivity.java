@@ -27,6 +27,7 @@ public class ScenesActivity extends AppCompatActivity
             @Override
             public void onClick(View view)
             {
+                //  default transition
                 TransitionManager.go(Scene.getSceneForLayout(linearLayoutRoot, R.layout.activity_scenes_detailed, ScenesActivity.this));
             }
         });
