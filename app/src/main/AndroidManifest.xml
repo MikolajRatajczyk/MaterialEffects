@@ -19,7 +19,8 @@
         <activity android:name=".ButtonsActivity" />
         <activity android:name=".ConstraintLayoutActivity" />
         <activity android:name=".MotionActivity" />
-        <activity android:name=".ScenesActivity"></activity>
+        <activity android:name=".ScenesActivity" />
+        <activity android:name=".TransitionsActivity"></activity>
     </application>
 
 </manifest>

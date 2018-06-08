@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity
     private Button buttonConstraintLayout;
     private Button buttonMotion;
     private Button buttonScenes;
+    private Button buttonTransitions;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -61,6 +62,17 @@ public class MainActivity extends AppCompatActivity
             public void onClick(View view)
             {
                 Intent intent = new Intent(MainActivity.this, ScenesActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        buttonTransitions = findViewById(R.id.main_activity_transitions_button);
+        buttonTransitions.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+                Intent intent = new Intent(MainActivity.this, TransitionsActivity.class);
                 startActivity(intent);
             }
         });
