@@ -1,5 +1,6 @@
 package com.ratajczykdev.materialeffects;
 
+import android.app.ActivityOptions;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -72,8 +73,11 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View view)
             {
+
                 Intent intent = new Intent(MainActivity.this, ContentTransitionsActivity.class);
-                startActivity(intent);
+                Bundle bundle = ActivityOptions.makeSceneTransitionAnimation(MainActivity.this).toBundle();
+                //  alter call to start activity to use variant which takes bundle
+                startActivity(intent, bundle);
             }
         });
     }
