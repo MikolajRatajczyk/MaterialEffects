@@ -21,19 +21,19 @@
         android:layout_height="176dp">
 
         <TextView
-            android:id="@+id/scenes_activity_detailed_fox_title_textview"
+            android:id="@+id/scenes_activity_fox_title_textview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:text="Red fox"
             android:textSize="36sp"
-            app:layout_constraintBottom_toTopOf="@+id/scenes_activity_detailed_fox_short_description_textview"
+            app:layout_constraintBottom_toTopOf="@+id/scenes_activity_fox_short_description_textview"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_chainStyle="spread" />
 
         <TextView
-            android:id="@+id/scenes_activity_detailed_fox_short_description_textview"
+            android:id="@+id/scenes_activity_fox_short_description_textview"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
@@ -43,8 +43,8 @@
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/scenes_activity_detailed_fox_title_textview"
-            app:layout_constraintTop_toBottomOf="@+id/scenes_activity_detailed_fox_title_textview" />
+            app:layout_constraintStart_toStartOf="@+id/scenes_activity_fox_title_textview"
+            app:layout_constraintTop_toBottomOf="@+id/scenes_activity_fox_title_textview" />
 
         <ImageButton
             android:id="@+id/scenes_activity_fox_info_imagebutton"
@@ -52,9 +52,9 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
             android:background="?android:selectableItemBackground"
-            app:layout_constraintBottom_toBottomOf="@+id/scenes_activity_detailed_fox_title_textview"
+            app:layout_constraintBottom_toBottomOf="@+id/scenes_activity_fox_title_textview"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/scenes_activity_detailed_fox_title_textview"
+            app:layout_constraintTop_toTopOf="@+id/scenes_activity_fox_title_textview"
             app:srcCompat="@drawable/ic_info_black" />
 
     </android.support.constraint.ConstraintLayout>

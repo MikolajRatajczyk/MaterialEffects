@@ -25,7 +25,7 @@
         android:layout_weight="1">
 
         <TextView
-            android:id="@+id/scenes_activity_detailed_fox_title_textview"
+            android:id="@+id/scenes_activity_fox_title_textview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -37,7 +37,7 @@
             app:layout_constraintVertical_chainStyle="spread" />
 
         <TextView
-            android:id="@+id/scenes_activity_detailed_fox_short_description_textview"
+            android:id="@+id/scenes_activity_fox_short_description_textview"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
@@ -47,8 +47,8 @@
             android:textColor="@color/colorAccent"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/scenes_activity_detailed_fox_title_textview"
-            app:layout_constraintTop_toBottomOf="@+id/scenes_activity_detailed_fox_title_textview" />
+            app:layout_constraintStart_toStartOf="@+id/scenes_activity_fox_title_textview"
+            app:layout_constraintTop_toBottomOf="@+id/scenes_activity_fox_title_textview" />
 
         <TextView
             android:id="@+id/scenes_activity_detailed_fox_full_description_textview"
@@ -61,8 +61,8 @@
             android:textAlignment="viewStart"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/scenes_activity_detailed_fox_short_description_textview"
-            app:layout_constraintTop_toBottomOf="@+id/scenes_activity_detailed_fox_short_description_textview" />
+            app:layout_constraintStart_toStartOf="@+id/scenes_activity_fox_short_description_textview"
+            app:layout_constraintTop_toBottomOf="@+id/scenes_activity_fox_short_description_textview" />
 
         <ImageButton
             android:id="@+id/scenes_activity_detailed_fox_close_button"
@@ -70,9 +70,9 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
             android:background="?android:selectableItemBackground"
-            app:layout_constraintBottom_toBottomOf="@+id/scenes_activity_detailed_fox_title_textview"
+            app:layout_constraintBottom_toBottomOf="@+id/scenes_activity_fox_title_textview"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/scenes_activity_detailed_fox_title_textview"
+            app:layout_constraintTop_toTopOf="@+id/scenes_activity_fox_title_textview"
             app:srcCompat="@drawable/ic_close_black" />
 
     </android.support.constraint.ConstraintLayout>
