@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ScenesActivity"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/scenes_activity_fox_image"
+        android:layout_width="240dp"
+        android:layout_height="120dp"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/image_fox"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="32dp"/>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/scenes_activity_fox_title_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Red fox"
+            android:textSize="36sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="spread" />
+
+        <TextView
+            android:id="@+id/scenes_activity_fox_description_textview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp"
+            android:text="The largest of the true foxes and one of the most widely distributed members of the order Carnivora."
+            android:textAlignment="viewStart"
+            android:textColor="@color/colorAccent"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/scenes_activity_fox_title_textview"
+            app:layout_constraintTop_toBottomOf="@+id/scenes_activity_fox_title_textview" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="8dp"
+            android:text="The red fox originated from smaller-sized ancestors from Eurasia during the Middle Villafranchian period, and colonised North America shortly after the Wisconsin glaciation. Among the true foxes, the red fox represents a more progressive form in the direction of carnivory. Apart from its large size, the red fox is distinguished from other fox species by its ability to adapt quickly to new environments. Despite its name, the species often produces individuals with other colourings, including albinos and melanists. Forty-five subspecies are currently recognised, which are divided into two categories: the large northern foxes, and the small, basal southern foxes of Asia and North Africa."
+            android:textAlignment="viewStart"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/scenes_activity_fox_description_textview"
+            app:layout_constraintTop_toBottomOf="@+id/scenes_activity_fox_description_textview" />
+
+        <ImageButton
+            android:id="@+id/scenes_activity_fox_info_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:background="?android:selectableItemBackground"
+            app:layout_constraintBottom_toBottomOf="@+id/scenes_activity_fox_title_textview"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/scenes_activity_fox_title_textview"
+            app:srcCompat="@drawable/ic_close_black" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</LinearLayout>
