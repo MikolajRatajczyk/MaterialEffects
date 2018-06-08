@@ -20,7 +20,7 @@
         <activity android:name=".ConstraintLayoutActivity" />
         <activity android:name=".MotionActivity" />
         <activity android:name=".ScenesActivity" />
-        <activity android:name=".TransitionsActivity"></activity>
+        <activity android:name=".ContentTransitionsActivity"></activity>
     </application>
 
 </manifest>

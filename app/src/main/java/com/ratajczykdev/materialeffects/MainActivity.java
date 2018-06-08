@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity
     private Button buttonConstraintLayout;
     private Button buttonMotion;
     private Button buttonScenes;
-    private Button buttonTransitions;
+    private Button buttonContentTransitions;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -66,13 +66,13 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
-        buttonTransitions = findViewById(R.id.main_activity_transitions_button);
-        buttonTransitions.setOnClickListener(new View.OnClickListener()
+        buttonContentTransitions = findViewById(R.id.main_activity_content_transitions_button);
+        buttonContentTransitions.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View view)
             {
-                Intent intent = new Intent(MainActivity.this, TransitionsActivity.class);
+                Intent intent = new Intent(MainActivity.this, ContentTransitionsActivity.class);
                 startActivity(intent);
             }
         });

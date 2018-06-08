@@ -3,13 +3,13 @@ package com.ratajczykdev.materialeffects;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class TransitionsActivity extends AppCompatActivity
+public class ContentTransitionsActivity extends AppCompatActivity
 {
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_transitions);
+        setContentView(R.layout.activity_content_transitions);
     }
 }
