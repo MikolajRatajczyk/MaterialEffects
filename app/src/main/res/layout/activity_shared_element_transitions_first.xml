@@ -7,51 +7,51 @@
     tools:context=".SharedElementTransitionsFirstActivity">
 
     <ImageView
-        android:id="@+id/shared_elements_transitions_activity_strawberries_image"
+        android:id="@+id/shared_elements_transitions_first_activity_strawberries_image"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:scaleType="centerCrop"
-        app:layout_constraintBottom_toTopOf="@+id/shared_elements_transitions_activity_koblenz_image"
+        app:layout_constraintBottom_toTopOf="@+id/shared_elements_transitions_first_activity_koblenz_image"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/image_strawberries" />
 
     <ImageView
-        android:id="@+id/shared_elements_transitions_activity_koblenz_image"
+        android:id="@+id/shared_elements_transitions_first_activity_koblenz_image"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:scaleType="centerCrop"
-        app:layout_constraintBottom_toTopOf="@+id/shared_elements_transitions_activity_stairs_image"
+        app:layout_constraintBottom_toTopOf="@+id/shared_elements_transitions_first_activity_stairs_image"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/shared_elements_transitions_activity_strawberries_image"
+        app:layout_constraintTop_toBottomOf="@+id/shared_elements_transitions_first_activity_strawberries_image"
         app:srcCompat="@drawable/image_koblenz" />
 
     <ImageView
-        android:id="@+id/shared_elements_transitions_activity_stairs_image"
+        android:id="@+id/shared_elements_transitions_first_activity_stairs_image"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:scaleType="centerCrop"
-        app:layout_constraintBottom_toTopOf="@+id/shared_elements_transitions_activity_stork_image"
+        app:layout_constraintBottom_toTopOf="@+id/shared_elements_transitions_first_activity_stork_image"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/shared_elements_transitions_activity_koblenz_image"
+        app:layout_constraintTop_toBottomOf="@+id/shared_elements_transitions_first_activity_koblenz_image"
         app:srcCompat="@drawable/image_stairs" />
 
     <ImageView
-        android:id="@+id/shared_elements_transitions_activity_stork_image"
+        android:id="@+id/shared_elements_transitions_first_activity_stork_image"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/shared_elements_transitions_activity_stairs_image"
+        app:layout_constraintTop_toBottomOf="@+id/shared_elements_transitions_first_activity_stairs_image"
         app:srcCompat="@drawable/image_stork" />
 
     <ImageButton
-        android:id="@+id/shared_elements_transitions_activity_info_imagebutton"
+        android:id="@+id/shared_elements_transitions_first_activity_info_imagebutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -59,6 +59,6 @@
         android:background="?android:selectableItemBackground"
         android:padding="8dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/shared_elements_transitions_activity_stork_image"
+        app:layout_constraintTop_toTopOf="@+id/shared_elements_transitions_first_activity_stork_image"
         app:srcCompat="@drawable/ic_info_black" />
 </android.support.constraint.ConstraintLayout>
