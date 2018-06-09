@@ -2,8 +2,10 @@
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Assign the exit transition -->
+        <!-- Assign own exit transition -->
         <item name="android:windowExitTransition">@transition/transition_activity_main_exit</item>
+        <!-- Assign reenter transition -->
+        <item name="android:windowReenterTransition">@android:transition/slide_top</item>
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
