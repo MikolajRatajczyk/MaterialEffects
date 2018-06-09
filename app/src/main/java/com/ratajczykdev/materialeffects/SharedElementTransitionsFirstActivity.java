@@ -22,16 +22,14 @@ public class SharedElementTransitionsFirstActivity extends AppCompatActivity
 
 
         imageStork = findViewById(R.id.shared_elements_transitions_first_activity_stork_image);
-
-        //  use default animation, specify shared element
-        final Bundle bundle = ActivityOptions.makeSceneTransitionAnimation(this, imageStork, imageStork.getTransitionName()).toBundle();
-
         imageStork.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View view)
             {
                 Intent intent = new Intent(SharedElementTransitionsFirstActivity.this, SharedElementTransitionsSecondActivity.class);
+                //  use default animation, specify shared element
+                Bundle bundle = ActivityOptions.makeSceneTransitionAnimation(SharedElementTransitionsFirstActivity.this, imageStork, imageStork.getTransitionName()).toBundle();
                 startActivity(intent, bundle);
             }
         });
