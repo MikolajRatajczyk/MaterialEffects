@@ -19,6 +19,7 @@ public class ContentTransitionsActivity extends AppCompatActivity
         Slide slide = new Slide(Gravity.BOTTOM);
         slide.addTarget(R.id.content_transitions_activity_title_textview);
         slide.addTarget(R.id.content_transitions_activity_description_textview);
+        slide.addTarget(R.id.content_transitions_activity_aurora_image);
         slide.setInterpolator(AnimationUtils.loadInterpolator(this, android.R.interpolator.linear_out_slow_in));
         slide.setDuration(300);
         getWindow().setEnterTransition(slide);
