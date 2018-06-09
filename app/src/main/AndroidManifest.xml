@@ -20,7 +20,9 @@
         <activity android:name=".ConstraintLayoutActivity" />
         <activity android:name=".MotionActivity" />
         <activity android:name=".ScenesActivity" />
-        <activity android:name=".ContentTransitionsActivity"></activity>
+        <activity android:name=".ContentTransitionsActivity" />
+        <activity android:name=".SharedElementTransitionsFirstActivity" />
+        <activity android:name=".SharedElementTransitionsSecondActivity"></activity>
     </application>
 
 </manifest>

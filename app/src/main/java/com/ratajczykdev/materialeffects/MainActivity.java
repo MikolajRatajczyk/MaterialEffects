@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity
     private Button buttonMotion;
     private Button buttonScenes;
     private Button buttonContentTransitions;
+    private Button buttonSharedElementTransitions;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -50,7 +51,6 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View view)
             {
-                //  TODO: make exit MainActivity animation
                 Intent intent = new Intent(MainActivity.this, MotionActivity.class);
                 startActivity(intent);
             }
@@ -78,6 +78,17 @@ public class MainActivity extends AppCompatActivity
                 Bundle bundle = ActivityOptions.makeSceneTransitionAnimation(MainActivity.this).toBundle();
                 //  alter call to start activity to use variant which takes bundle
                 startActivity(intent, bundle);
+            }
+        });
+
+        buttonSharedElementTransitions = findViewById(R.id.main_activity_shared_elements_transitions_button);
+        buttonSharedElementTransitions.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+                Intent intent = new Intent(MainActivity.this, SharedElementTransitionsFirstActivity.class);
+                startActivity(intent);
             }
         });
     }
