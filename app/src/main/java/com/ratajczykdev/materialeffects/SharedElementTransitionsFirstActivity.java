@@ -4,11 +4,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.Toast;
 
 public class SharedElementTransitionsFirstActivity extends AppCompatActivity
 {
-    private ImageButton imageButtonInfo;
+    private ImageView imageStork;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -16,8 +17,10 @@ public class SharedElementTransitionsFirstActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shared_element_transitions_first);
 
-        imageButtonInfo = findViewById(R.id.shared_elements_transitions_first_activity_info_imagebutton);
-        imageButtonInfo.setOnClickListener(new View.OnClickListener()
+        Toast.makeText(this, "The stork is clickable", Toast.LENGTH_SHORT).show();
+
+        imageStork = findViewById(R.id.shared_elements_transitions_first_activity_stork_image);
+        imageStork.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View view)

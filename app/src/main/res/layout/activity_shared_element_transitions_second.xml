@@ -6,4 +6,14 @@
     android:layout_height="match_parent"
     tools:context=".SharedElementTransitionsSecondActivity">
 
+    <ImageView
+        android:id="@+id/shared_elements_transitions_second_activity_stork_image"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/image_stork" />
 </android.support.constraint.ConstraintLayout>
