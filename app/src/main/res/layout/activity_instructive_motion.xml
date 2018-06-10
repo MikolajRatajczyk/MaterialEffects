@@ -13,10 +13,12 @@
         android:scaleType="centerCrop"
         app:srcCompat="@drawable/image_golden_gate" />
 
+    <!-- Use android:clipToPadding="false" to overlay the ScrollView above the ImageView -->
     <ScrollView
         android:id="@+id/instructive_motion_activity_scroll_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:clipToPadding="false"
         android:paddingTop="400dp">
 
         <LinearLayout
