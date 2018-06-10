@@ -9,7 +9,6 @@ import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 
-//  TODO: make enter MotionActivity animation
 public class MotionActivity extends AppCompatActivity
 {
     private Button buttonSlide;
