@@ -20,5 +20,10 @@ public class InterpolationActivity extends AppCompatActivity
         arrayAdapterForInterpolatorsSpinner.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerInterpolators = findViewById(R.id.interpolation_activity_interpolators_spinner);
         spinnerInterpolators.setAdapter(arrayAdapterForInterpolatorsSpinner);
+
+        ArrayAdapter<CharSequence> arrayAdapterForDurationsSpinner = ArrayAdapter.createFromResource(this, R.array.durations_array, android.R.layout.simple_spinner_item);
+        arrayAdapterForDurationsSpinner.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerDurations = findViewById(R.id.interpolation_activity_durations_spinner);
+        spinnerDurations.setAdapter(arrayAdapterForDurationsSpinner);
     }
 }
