@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity
     private Button buttonContentTransitions;
     private Button buttonSharedElementTransitions;
     private Button buttonInstructiveMotion;
+    private Button buttonInterpolation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -100,6 +101,17 @@ public class MainActivity extends AppCompatActivity
             public void onClick(View view)
             {
                 Intent intent = new Intent(MainActivity.this, InstructiveMotionActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        buttonInterpolation = findViewById(R.id.main_activity_interpolation_button);
+        buttonInterpolation.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+                Intent intent = new Intent(MainActivity.this, InterpolationActivity.class);
                 startActivity(intent);
             }
         });

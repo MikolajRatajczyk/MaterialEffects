@@ -23,7 +23,8 @@
         <activity android:name=".ContentTransitionsActivity" />
         <activity android:name=".SharedElementTransitionsFirstActivity" />
         <activity android:name=".SharedElementTransitionsSecondActivity" />
-        <activity android:name=".InstructiveMotionActivity"></activity>
+        <activity android:name=".InstructiveMotionActivity" />
+        <activity android:name=".InterpolationActivity"></activity>
     </application>
 
 </manifest>
