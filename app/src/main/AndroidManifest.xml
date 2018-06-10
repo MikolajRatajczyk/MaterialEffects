@@ -22,7 +22,8 @@
         <activity android:name=".ScenesActivity" />
         <activity android:name=".ContentTransitionsActivity" />
         <activity android:name=".SharedElementTransitionsFirstActivity" />
-        <activity android:name=".SharedElementTransitionsSecondActivity"></activity>
+        <activity android:name=".SharedElementTransitionsSecondActivity" />
+        <activity android:name=".InstructiveMotionActivity"></activity>
     </application>
 
 </manifest>

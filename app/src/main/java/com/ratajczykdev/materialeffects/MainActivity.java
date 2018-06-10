@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity
     private Button buttonScenes;
     private Button buttonContentTransitions;
     private Button buttonSharedElementTransitions;
+    private Button buttonInstructiveMotion;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -88,6 +89,17 @@ public class MainActivity extends AppCompatActivity
             public void onClick(View view)
             {
                 Intent intent = new Intent(MainActivity.this, SharedElementTransitionsFirstActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        buttonInstructiveMotion = findViewById(R.id.main_activity_instructive_motion_button);
+        buttonInstructiveMotion.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+                Intent intent = new Intent(MainActivity.this, InstructiveMotionActivity.class);
                 startActivity(intent);
             }
         });
