@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="interpolators_array">
+        <item>AccelerateDecelerateInterpolator</item>
+        <item>AccelerateInterpolator</item>
+        <item>AnticipateInterpolator</item>
+        <item>AnticipateOvershootInterpolator</item>
+        <item>BaseInterpolator</item>
+        <item>BounceInterpolator</item>
+        <item>CycleInterpolator</item>
+        <item>DecelerateInterpolator</item>
+        <item>LinearInterpolator</item>
+        <item>OvershootInterpolator</item>
+        <item>PathInterpolator</item>
+    </string-array>
+</resources>
