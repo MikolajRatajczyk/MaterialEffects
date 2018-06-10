@@ -20,10 +20,10 @@ public class InterpolationActivity extends AppCompatActivity
     private ArrayAdapter<CharSequence> arrayAdapterForDurationsSpinner;
     private Interpolator selectedInterpolator;
     private long selectedDuration;
-    private final String LOG_TAG = InterpolationActivity.class.getSimpleName();
-    private final int DEFAULT_SPINNER_DURATIONS_SELECTION = 1;
     private final int DEFAULT_ANIMATION_START_DELAY = 500;
+    private final int DEFAULT_SPINNER_DURATIONS_SELECTION = 1;
     private final String BASE_INTERPOLATOR_CLASS_PATH = "android.view.animation.";
+    private final String LOG_TAG = InterpolationActivity.class.getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -37,14 +37,11 @@ public class InterpolationActivity extends AppCompatActivity
         configureSpinnerDurations();
     }
 
-    private void configureSpinnerDurations()
+    private void setUiElementsReferences()
     {
-        arrayAdapterForDurationsSpinner = ArrayAdapter.createFromResource(this, R.array.durations_array, android.R.layout.simple_spinner_item);
-        arrayAdapterForDurationsSpinner.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-
-        spinnerDurations.setAdapter(arrayAdapterForDurationsSpinner);
-        spinnerDurations.setSelection(DEFAULT_SPINNER_DURATIONS_SELECTION);
-        setSpinnerDurationsListener();
+        spinnerInterpolators = findViewById(R.id.interpolation_activity_interpolators_spinner);
+        spinnerDurations = findViewById(R.id.interpolation_activity_durations_spinner);
+        textViewInterpolation = findViewById(R.id.interpolation_activity_interpolation_textview);
     }
 
     private void configureSpinnerInterpolators()
@@ -54,6 +51,59 @@ public class InterpolationActivity extends AppCompatActivity
 
         spinnerInterpolators.setAdapter(arrayAdapterForInterpolatorsSpinner);
         setSpinnerInterpolatorsListener();
+    }
+
+    private void setSpinnerInterpolatorsListener()
+    {
+        spinnerInterpolators.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener()
+        {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l)
+            {
+                String selectedInterpolatorName = adapterView.getItemAtPosition(position).toString();
+                selectedInterpolator = createInterpolatorForName(selectedInterpolatorName);
+                if (selectedInterpolator != null && selectedDuration > 0)
+                {
+                    startTextViewAnimation();
+                }
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView)
+            {
+
+            }
+        });
+    }
+
+    void startTextViewAnimation()
+    {
+        DisplayMetrics displayMetrics = new DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
+        textViewInterpolation.setTranslationY(displayMetrics.heightPixels);
+        try
+        {
+            textViewInterpolation.animate().setInterpolator(selectedInterpolator)
+                    .setDuration(selectedDuration)
+                    .setStartDelay(DEFAULT_ANIMATION_START_DELAY)
+                    .translationYBy(-displayMetrics.heightPixels)
+                    .start();
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+    }
+
+    private void configureSpinnerDurations()
+    {
+        arrayAdapterForDurationsSpinner = ArrayAdapter.createFromResource(this, R.array.durations_array, android.R.layout.simple_spinner_item);
+        arrayAdapterForDurationsSpinner.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        spinnerDurations.setAdapter(arrayAdapterForDurationsSpinner);
+        spinnerDurations.setSelection(DEFAULT_SPINNER_DURATIONS_SELECTION);
+        setSpinnerDurationsListener();
     }
 
     private void setSpinnerDurationsListener()
@@ -81,37 +131,6 @@ public class InterpolationActivity extends AppCompatActivity
         });
     }
 
-    private void setSpinnerInterpolatorsListener()
-    {
-        spinnerInterpolators.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener()
-        {
-            @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l)
-            {
-                String selectedInterpolatorName = adapterView.getItemAtPosition(position).toString();
-                selectedInterpolator = createInterpolatorForName(selectedInterpolatorName);
-                if (selectedInterpolator != null && selectedDuration > 0)
-                {
-                    startTextViewAnimation();
-                }
-
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> adapterView)
-            {
-
-            }
-        });
-    }
-
-    private void setUiElementsReferences()
-    {
-        spinnerInterpolators = findViewById(R.id.interpolation_activity_interpolators_spinner);
-        spinnerDurations = findViewById(R.id.interpolation_activity_durations_spinner);
-        textViewInterpolation = findViewById(R.id.interpolation_activity_interpolation_textview);
-    }
-
     Interpolator createInterpolatorForName(String name)
     {
         Interpolator interpolator = null;
@@ -125,24 +144,5 @@ public class InterpolationActivity extends AppCompatActivity
             Log.e(LOG_TAG, "Can not create Interpolator for name: " + name);
         }
         return interpolator;
-    }
-
-    void startTextViewAnimation()
-    {
-        DisplayMetrics displayMetrics = new DisplayMetrics();
-        getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
-        textViewInterpolation.setTranslationY(displayMetrics.heightPixels);
-        try
-        {
-            textViewInterpolation.animate().setInterpolator(selectedInterpolator)
-                    .setDuration(selectedDuration)
-                    .setStartDelay(DEFAULT_ANIMATION_START_DELAY)
-                    .translationYBy(-displayMetrics.heightPixels)
-                    .start();
-        }
-        catch (Exception e)
-        {
-            e.printStackTrace();
-        }
     }
 }
