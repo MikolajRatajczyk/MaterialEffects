@@ -16,9 +16,14 @@ public class InterpolationActivity extends AppCompatActivity
     private Spinner spinnerInterpolators;
     private Spinner spinnerDurations;
     private TextView textViewInterpolation;
+    private ArrayAdapter<CharSequence> arrayAdapterForInterpolatorsSpinner;
+    private ArrayAdapter<CharSequence> arrayAdapterForDurationsSpinner;
     private Interpolator selectedInterpolator;
     private long selectedDuration;
     private final String LOG_TAG = InterpolationActivity.class.getSimpleName();
+    private final int DEFAULT_SPINNER_DURATIONS_SELECTION = 1;
+    private final int DEFAULT_ANIMATION_START_DELAY = 500;
+    private final String BASE_INTERPOLATOR_CLASS_PATH = "android.view.animation.";
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -26,38 +31,33 @@ public class InterpolationActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_interpolation);
 
-        textViewInterpolation = findViewById(R.id.interpolation_activity_interpolation_textview);
+        setUiElementsReferences();
 
-        ArrayAdapter<CharSequence> arrayAdapterForInterpolatorsSpinner = ArrayAdapter.createFromResource(this, R.array.interpolators_array, android.R.layout.simple_spinner_item);
-        arrayAdapterForInterpolatorsSpinner.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinnerInterpolators = findViewById(R.id.interpolation_activity_interpolators_spinner);
-        spinnerInterpolators.setAdapter(arrayAdapterForInterpolatorsSpinner);
-        spinnerInterpolators.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener()
-        {
-            @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l)
-            {
-                String selectedInterpolatorName = adapterView.getItemAtPosition(position).toString();
-                selectedInterpolator = createInterpolatorForName(selectedInterpolatorName);
-                if (selectedInterpolator != null && selectedDuration > 0)
-                {
-                    startTextViewAnimation();
-                }
+        configureSpinnerInterpolators();
+        configureSpinnerDurations();
+    }
 
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> adapterView)
-            {
-
-            }
-        });
-
-        ArrayAdapter<CharSequence> arrayAdapterForDurationsSpinner = ArrayAdapter.createFromResource(this, R.array.durations_array, android.R.layout.simple_spinner_item);
+    private void configureSpinnerDurations()
+    {
+        arrayAdapterForDurationsSpinner = ArrayAdapter.createFromResource(this, R.array.durations_array, android.R.layout.simple_spinner_item);
         arrayAdapterForDurationsSpinner.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinnerDurations = findViewById(R.id.interpolation_activity_durations_spinner);
+
         spinnerDurations.setAdapter(arrayAdapterForDurationsSpinner);
-        spinnerDurations.setSelection(1);
+        spinnerDurations.setSelection(DEFAULT_SPINNER_DURATIONS_SELECTION);
+        setSpinnerDurationsListener();
+    }
+
+    private void configureSpinnerInterpolators()
+    {
+        arrayAdapterForInterpolatorsSpinner = ArrayAdapter.createFromResource(this, R.array.interpolators_array, android.R.layout.simple_spinner_item);
+        arrayAdapterForInterpolatorsSpinner.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        spinnerInterpolators.setAdapter(arrayAdapterForInterpolatorsSpinner);
+        setSpinnerInterpolatorsListener();
+    }
+
+    private void setSpinnerDurationsListener()
+    {
         spinnerDurations.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener()
         {
             @Override
@@ -81,12 +81,43 @@ public class InterpolationActivity extends AppCompatActivity
         });
     }
 
+    private void setSpinnerInterpolatorsListener()
+    {
+        spinnerInterpolators.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener()
+        {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l)
+            {
+                String selectedInterpolatorName = adapterView.getItemAtPosition(position).toString();
+                selectedInterpolator = createInterpolatorForName(selectedInterpolatorName);
+                if (selectedInterpolator != null && selectedDuration > 0)
+                {
+                    startTextViewAnimation();
+                }
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView)
+            {
+
+            }
+        });
+    }
+
+    private void setUiElementsReferences()
+    {
+        spinnerInterpolators = findViewById(R.id.interpolation_activity_interpolators_spinner);
+        spinnerDurations = findViewById(R.id.interpolation_activity_durations_spinner);
+        textViewInterpolation = findViewById(R.id.interpolation_activity_interpolation_textview);
+    }
+
     Interpolator createInterpolatorForName(String name)
     {
         Interpolator interpolator = null;
         try
         {
-            interpolator = (Interpolator) Class.forName("android.view.animation." + name).newInstance();
+            interpolator = (Interpolator) Class.forName(BASE_INTERPOLATOR_CLASS_PATH + name).newInstance();
         }
         catch (Exception e)
         {
@@ -105,7 +136,7 @@ public class InterpolationActivity extends AppCompatActivity
         {
             textViewInterpolation.animate().setInterpolator(selectedInterpolator)
                     .setDuration(selectedDuration)
-                    .setStartDelay(500)
+                    .setStartDelay(DEFAULT_ANIMATION_START_DELAY)
                     .translationYBy(-displayMetrics.heightPixels)
                     .start();
         }
