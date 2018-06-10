@@ -20,9 +20,6 @@ public class InterpolationActivity extends AppCompatActivity
     private ArrayAdapter<CharSequence> arrayAdapterForDurationsSpinner;
     private Interpolator selectedInterpolator;
     private long selectedDuration;
-    private final int DEFAULT_ANIMATION_START_DELAY = 500;
-    private final int DEFAULT_SPINNER_DURATIONS_SELECTION = 1;
-    private final String BASE_INTERPOLATOR_CLASS_PATH = "android.view.animation.";
     private final String LOG_TAG = InterpolationActivity.class.getSimpleName();
 
     @Override
@@ -82,6 +79,7 @@ public class InterpolationActivity extends AppCompatActivity
         DisplayMetrics displayMetrics = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
         textViewInterpolation.setTranslationY(displayMetrics.heightPixels);
+        final int DEFAULT_ANIMATION_START_DELAY = 500;
         try
         {
             textViewInterpolation.animate().setInterpolator(selectedInterpolator)
@@ -98,6 +96,7 @@ public class InterpolationActivity extends AppCompatActivity
 
     private void configureSpinnerDurations()
     {
+        final int DEFAULT_SPINNER_DURATIONS_SELECTION = 1;
         arrayAdapterForDurationsSpinner = ArrayAdapter.createFromResource(this, R.array.durations_array, android.R.layout.simple_spinner_item);
         arrayAdapterForDurationsSpinner.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
@@ -133,6 +132,7 @@ public class InterpolationActivity extends AppCompatActivity
 
     Interpolator createInterpolatorForName(String name)
     {
+        final String BASE_INTERPOLATOR_CLASS_PATH = "android.view.animation.";
         Interpolator interpolator = null;
         try
         {
