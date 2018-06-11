@@ -24,7 +24,8 @@
         <activity android:name=".SharedElementTransitionsFirstActivity" />
         <activity android:name=".SharedElementTransitionsSecondActivity" />
         <activity android:name=".InstructiveMotionActivity" />
-        <activity android:name=".InterpolationActivity"></activity>
+        <activity android:name=".InterpolationActivity" />
+        <activity android:name=".coordinatedmotion.CoordinatedMotionMenuActivity"></activity>
     </application>
 
 </manifest>

@@ -7,6 +7,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+import com.ratajczykdev.materialeffects.coordinatedmotion.CoordinatedMotionMenuActivity;
+
 public class MainActivity extends AppCompatActivity
 {
 
@@ -18,6 +20,7 @@ public class MainActivity extends AppCompatActivity
     private Button buttonSharedElementTransitions;
     private Button buttonInstructiveMotion;
     private Button buttonInterpolation;
+    private Button buttonCoordinatedMotion;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -112,6 +115,17 @@ public class MainActivity extends AppCompatActivity
             public void onClick(View view)
             {
                 Intent intent = new Intent(MainActivity.this, InterpolationActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        buttonCoordinatedMotion = findViewById(R.id.main_activity_coordinated_motion_button);
+        buttonCoordinatedMotion.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+                Intent intent = new Intent(MainActivity.this, CoordinatedMotionMenuActivity.class);
                 startActivity(intent);
             }
         });
