@@ -26,7 +26,8 @@
         <activity android:name=".InstructiveMotionActivity" />
         <activity android:name=".InterpolationActivity" />
         <activity android:name=".coordinatedmotion.CoordinatedMotionMenuActivity" />
-        <activity android:name=".coordinatedmotion.MovingCardsActivity"></activity>
+        <activity android:name=".coordinatedmotion.MovingCardsActivity" />
+        <activity android:name=".coordinatedmotion.TransformingSurfacesActivity"></activity>
     </application>
 
 </manifest>

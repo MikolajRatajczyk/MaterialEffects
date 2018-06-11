@@ -10,7 +10,8 @@ import com.ratajczykdev.materialeffects.R;
 
 public class CoordinatedMotionMenuActivity extends AppCompatActivity
 {
-    private Button movingCardsButton;
+    private Button buttonMovingCards;
+    private Button buttonTransformingSurfaces;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -18,13 +19,24 @@ public class CoordinatedMotionMenuActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_coordinated_motion_menu);
 
-        movingCardsButton = findViewById(R.id.coordinated_motion_activity_moving_cards_button);
-        movingCardsButton.setOnClickListener(new View.OnClickListener()
+        buttonMovingCards = findViewById(R.id.coordinated_motion_menu_activity_moving_cards_button);
+        buttonMovingCards.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View view)
             {
                 Intent intent = new Intent(CoordinatedMotionMenuActivity.this, MovingCardsActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        buttonTransformingSurfaces = findViewById(R.id.coordinated_motion_menu_activity_surfaces_button);
+        buttonTransformingSurfaces.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+                Intent intent = new Intent(CoordinatedMotionMenuActivity.this, TransformingSurfacesActivity.class);
                 startActivity(intent);
             }
         });

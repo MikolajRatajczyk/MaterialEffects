@@ -7,16 +7,28 @@
     tools:context=".coordinatedmotion.CoordinatedMotionMenuActivity">
 
     <Button
-        android:id="@+id/coordinated_motion_activity_moving_cards_button"
+        android:id="@+id/coordinated_motion_menu_activity_moving_cards_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Go to moving cards"
+        app:layout_constraintBottom_toTopOf="@+id/coordinated_motion_menu_activity_surfaces_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/coordinated_motion_menu_activity_surfaces_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="Go to moving cards"
+        android:text="Go to transforming surfaces"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/coordinated_motion_menu_activity_moving_cards_button" />
 </android.support.constraint.ConstraintLayout>
