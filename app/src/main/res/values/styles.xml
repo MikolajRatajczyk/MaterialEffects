@@ -9,6 +9,8 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <!-- Workaround for "cardViewStyle" problem -->
+        <item name="cardViewStyle">@style/CardView</item>
     </style>
 
 </resources>
