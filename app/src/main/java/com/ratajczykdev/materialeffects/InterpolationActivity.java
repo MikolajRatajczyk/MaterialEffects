@@ -74,12 +74,28 @@ public class InterpolationActivity extends AppCompatActivity
         });
     }
 
+    Interpolator createInterpolatorForName(String name)
+    {
+        final String BASE_INTERPOLATOR_CLASS_PATH = "android.view.animation.";
+        Interpolator interpolator = null;
+        try
+        {
+            interpolator = (Interpolator) Class.forName(BASE_INTERPOLATOR_CLASS_PATH + name).newInstance();
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+            Log.e(LOG_TAG, "Can not create Interpolator for name: " + name);
+        }
+        return interpolator;
+    }
+
     void startTextViewAnimation()
     {
         DisplayMetrics displayMetrics = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
         textViewInterpolation.setTranslationY(displayMetrics.heightPixels);
-        final int DEFAULT_ANIMATION_START_DELAY = 500;
+        final int DEFAULT_ANIMATION_START_DELAY = 200;
         try
         {
             textViewInterpolation.animate().setInterpolator(selectedInterpolator)
@@ -128,21 +144,5 @@ public class InterpolationActivity extends AppCompatActivity
 
             }
         });
-    }
-
-    Interpolator createInterpolatorForName(String name)
-    {
-        final String BASE_INTERPOLATOR_CLASS_PATH = "android.view.animation.";
-        Interpolator interpolator = null;
-        try
-        {
-            interpolator = (Interpolator) Class.forName(BASE_INTERPOLATOR_CLASS_PATH + name).newInstance();
-        }
-        catch (Exception e)
-        {
-            e.printStackTrace();
-            Log.e(LOG_TAG, "Can not create Interpolator for name: " + name);
-        }
-        return interpolator;
     }
 }
