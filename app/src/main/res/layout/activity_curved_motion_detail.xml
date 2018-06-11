@@ -19,10 +19,11 @@
             android:elevation="2dp">
 
             <View
-                android:id="@+id/view"
+                android:id="@+id/curved_motion_detail_activity_avatar_view"
                 android:layout_width="112dp"
                 android:layout_height="112dp"
                 android:background="@drawable/shape_avatar_oval"
+                android:transitionName="curved_motion_avatar_to_transition"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
