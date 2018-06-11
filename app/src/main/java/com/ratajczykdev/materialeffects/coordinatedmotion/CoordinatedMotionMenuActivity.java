@@ -12,6 +12,7 @@ public class CoordinatedMotionMenuActivity extends AppCompatActivity
 {
     private Button buttonMovingCards;
     private Button buttonTransformingSurfaces;
+    private Button buttonCurvedMotion;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -37,6 +38,17 @@ public class CoordinatedMotionMenuActivity extends AppCompatActivity
             public void onClick(View view)
             {
                 Intent intent = new Intent(CoordinatedMotionMenuActivity.this, TransformingSurfacesActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        buttonCurvedMotion = findViewById(R.id.coordinated_motion_menu_activity_curved_motion_button);
+        buttonCurvedMotion.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+                Intent intent = new Intent(CoordinatedMotionMenuActivity.this, CurvedMotionListActivity.class);
                 startActivity(intent);
             }
         });
