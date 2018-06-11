@@ -34,7 +34,6 @@ public class MovingCardsActivity extends AppCompatActivity
 
     private void animateCards()
     {
-        final int CARDS_COUNT = linearLayoutCardsRoot.getChildCount();
         float cardOffsetY = getResources().getDimensionPixelSize(R.dimen.moving_cards_activity_card_offset_y);
         Interpolator cardInterpolator = AnimationUtils.loadInterpolator(this, android.R.interpolator.linear_out_slow_in);
 
@@ -43,6 +42,7 @@ public class MovingCardsActivity extends AppCompatActivity
         final float CARD_FINAL_Y_AXIS_VALUE = 0f;
         final long CARD_ANIMATION_DURATION = 1000L;
         final float CARD_OFFSET_MULTIPLIER = 1.5f;
+        final int CARDS_COUNT = linearLayoutCardsRoot.getChildCount();
         for (int position = 0; position < CARDS_COUNT; position++)
         {
             View card = linearLayoutCardsRoot.getChildAt(position);
