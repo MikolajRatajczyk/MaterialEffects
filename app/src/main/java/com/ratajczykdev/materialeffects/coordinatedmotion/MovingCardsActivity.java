@@ -40,9 +40,10 @@ public class MovingCardsActivity extends AppCompatActivity
         final float CARD_START_OPACITY = 0.85f;
         final float CARD_FINAL_OPACITY = 1f;
         final float CARD_FINAL_Y_AXIS_VALUE = 0f;
-        final long CARD_ANIMATION_DURATION = 1000L;
+        final long CARD_ANIMATION_DURATION_MS = 1000L;
         final float CARD_OFFSET_MULTIPLIER = 1.5f;
         final int CARDS_COUNT = linearLayoutCardsRoot.getChildCount();
+
         for (int position = 0; position < CARDS_COUNT; position++)
         {
             View card = linearLayoutCardsRoot.getChildAt(position);
@@ -55,7 +56,7 @@ public class MovingCardsActivity extends AppCompatActivity
                     .translationY(CARD_FINAL_Y_AXIS_VALUE)
                     .alpha(CARD_FINAL_OPACITY)
                     .setInterpolator(cardInterpolator)
-                    .setDuration(CARD_ANIMATION_DURATION)
+                    .setDuration(CARD_ANIMATION_DURATION_MS)
                     .start();
 
             cardOffsetY *= CARD_OFFSET_MULTIPLIER;
