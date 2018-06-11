@@ -2,12 +2,14 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/transforming_surfaces_activity_root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFF8E1"
     tools:context=".coordinatedmotion.TransformingSurfacesActivity">
 
     <android.support.v7.widget.CardView
+        android:id="@+id/transforming_surfaces_activity_surface_cardview"
         android:layout_width="144dp"
         android:layout_height="192dp"
         android:layout_marginBottom="16dp"
