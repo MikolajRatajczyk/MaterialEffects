@@ -1,5 +1,6 @@
 package com.ratajczykdev.materialeffects.coordinatedmotion;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -23,7 +24,8 @@ public class CurvedMotionListActivity extends AppCompatActivity
             @Override
             public void onClick(View view)
             {
-                //  TODO: start detail activity
+                Intent intent = new Intent(CurvedMotionListActivity.this, CurvedMotionDetailActivity.class);
+                startActivity(intent);
             }
         });
     }
