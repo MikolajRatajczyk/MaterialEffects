@@ -67,11 +67,13 @@ public class TransformingSurfacesActivity extends AppCompatActivity
     {
         Interpolator interpolator = AnimationUtils.loadInterpolator(this, android.R.interpolator.overshoot);
 
-        ObjectAnimator objectAnimatorScaleX = ObjectAnimator.ofFloat(cardViewSurface, View.SCALE_X, 1f);
+        final float INITIAL_SCALE = 1f;
+
+        ObjectAnimator objectAnimatorScaleX = ObjectAnimator.ofFloat(cardViewSurface, View.SCALE_X, INITIAL_SCALE);
         objectAnimatorScaleX.setInterpolator(interpolator);
         objectAnimatorScaleX.setDuration(SHORT_ANIMATION_TIME_IN_MS);
 
-        ObjectAnimator objectAnimatorScaleY = ObjectAnimator.ofFloat(cardViewSurface, View.SCALE_Y, 1f);
+        ObjectAnimator objectAnimatorScaleY = ObjectAnimator.ofFloat(cardViewSurface, View.SCALE_Y, INITIAL_SCALE);
         objectAnimatorScaleY.setInterpolator(interpolator);
         objectAnimatorScaleY.setDuration(LONG_ANIMATION_TIME_IN_MS);
 
