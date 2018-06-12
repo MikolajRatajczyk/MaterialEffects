@@ -5,5 +5,5 @@
     <string name="path_cross">M6.4,6.4 L17.6,17.6 M6.4,17.6 L17.6,6.4</string>
 
     <!-- timing -->
-    <integer name="animation_duration">450</integer>
+    <integer name="tick_cross_animation_duration">450</integer>
 </resources>
