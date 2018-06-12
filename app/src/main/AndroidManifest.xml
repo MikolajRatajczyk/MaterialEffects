@@ -30,7 +30,8 @@
         <activity android:name=".coordinatedmotion.TransformingSurfacesActivity" />
         <activity android:name=".coordinatedmotion.CurvedMotionListActivity" />
         <activity android:name=".coordinatedmotion.CurvedMotionDetailActivity" />
-        <activity android:name=".vectors.AnimatedVectorDrawablesMenuActivity"></activity>
+        <activity android:name=".vectors.AnimatedVectorDrawablesMenuActivity" />
+        <activity android:name=".vectors.AnimatedPath"></activity>
     </application>
 
 </manifest>
