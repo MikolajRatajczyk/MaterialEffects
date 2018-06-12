@@ -11,9 +11,10 @@ import com.ratajczykdev.materialeffects.R;
 
 public class AnimatedPath extends AppCompatActivity
 {
-
     private ImageView imageViewAnimatedItem;
     private AnimatedVectorDrawable avdCrossToTick;
+    private AnimatedVectorDrawable avdTickToCross;
+    private boolean isTick;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -22,21 +23,47 @@ public class AnimatedPath extends AppCompatActivity
         setContentView(R.layout.activity_animated_path);
 
         avdCrossToTick = (AnimatedVectorDrawable) getDrawable(R.drawable.avd_cross_to_tick);
-        if (avdCrossToTick != null)
-        {
-            avdCrossToTick.reset();
-        }
+        avdTickToCross = (AnimatedVectorDrawable) getDrawable(R.drawable.avd_tick_to_cross);
+
+        resetAnimatedVectorDrawables();
 
         imageViewAnimatedItem = findViewById(R.id.animated_path_activity_animated_item_imageview);
-        imageViewAnimatedItem.setImageDrawable(avdCrossToTick);
         imageViewAnimatedItem.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View view)
             {
-                avdCrossToTick.start();
+                animateAvd();
             }
         });
 
+    }
+
+    private void resetAnimatedVectorDrawables()
+    {
+        if (avdCrossToTick != null)
+        {
+            avdCrossToTick.reset();
+        }
+        if (avdTickToCross != null)
+        {
+            avdTickToCross.reset();
+        }
+    }
+
+    private void animateAvd()
+    {
+        //  when activity starts for the first time this condition is always true
+        if (!isTick)
+        {
+            imageViewAnimatedItem.setImageDrawable(avdCrossToTick);
+            avdCrossToTick.start();
+            isTick = true;
+        } else if (isTick)
+        {
+            imageViewAnimatedItem.setImageDrawable(avdTickToCross);
+            avdTickToCross.start();
+            isTick = false;
+        }
     }
 }
