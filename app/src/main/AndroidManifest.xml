@@ -29,7 +29,8 @@
         <activity android:name=".coordinatedmotion.MovingCardsActivity" />
         <activity android:name=".coordinatedmotion.TransformingSurfacesActivity" />
         <activity android:name=".coordinatedmotion.CurvedMotionListActivity" />
-        <activity android:name=".coordinatedmotion.CurvedMotionDetailActivity"></activity>
+        <activity android:name=".coordinatedmotion.CurvedMotionDetailActivity" />
+        <activity android:name=".vectors.AnimatedVectorDrawablesMenuActivity"></activity>
     </application>
 
 </manifest>

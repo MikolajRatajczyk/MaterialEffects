@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.ratajczykdev.materialeffects.coordinatedmotion.CoordinatedMotionMenuActivity;
+import com.ratajczykdev.materialeffects.vectors.AnimatedVectorDrawablesMenuActivity;
 
 public class MainActivity extends AppCompatActivity
 {
@@ -21,6 +22,7 @@ public class MainActivity extends AppCompatActivity
     private Button buttonInstructiveMotion;
     private Button buttonInterpolation;
     private Button buttonCoordinatedMotion;
+    private Button buttonVector;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -126,6 +128,17 @@ public class MainActivity extends AppCompatActivity
             public void onClick(View view)
             {
                 Intent intent = new Intent(MainActivity.this, CoordinatedMotionMenuActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        buttonVector = findViewById(R.id.main_activity_vector_button);
+        buttonVector.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+                Intent intent = new Intent(MainActivity.this, AnimatedVectorDrawablesMenuActivity.class);
                 startActivity(intent);
             }
         });
