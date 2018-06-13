@@ -31,7 +31,8 @@
         <activity android:name=".coordinatedmotion.CurvedMotionListActivity" />
         <activity android:name=".coordinatedmotion.CurvedMotionDetailActivity" />
         <activity android:name=".vectors.AnimatedVectorDrawablesMenuActivity" />
-        <activity android:name=".vectors.AnimatedPathActivity"></activity>
+        <activity android:name=".vectors.AnimatedPathActivity" />
+        <activity android:name=".AboutActivity"></activity>
     </application>
 
 </manifest>

@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity
     private Button buttonInterpolation;
     private Button buttonCoordinatedMotion;
     private Button buttonVector;
+    private Button buttonAbout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -49,6 +50,7 @@ public class MainActivity extends AppCompatActivity
         buttonInterpolation = findViewById(R.id.main_activity_interpolation_button);
         buttonCoordinatedMotion = findViewById(R.id.main_activity_coordinated_motion_button);
         buttonVector = findViewById(R.id.main_activity_vector_button);
+        buttonAbout = findViewById(R.id.main_activity_about_button);
     }
 
     private void setButtonsListeners()
@@ -152,6 +154,16 @@ public class MainActivity extends AppCompatActivity
             public void onClick(View view)
             {
                 Intent intent = new Intent(MainActivity.this, InstructiveMotionActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        buttonAbout.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+                Intent intent = new Intent(MainActivity.this, AboutActivity.class);
                 startActivity(intent);
             }
         });

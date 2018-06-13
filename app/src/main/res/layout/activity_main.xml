@@ -248,13 +248,35 @@
                     style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="16dp"
                     android:layout_marginTop="16dp"
                     android:text="Animated Vector Drawables"
                     android:textSize="16sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="@+id/main_activity_buttons_start_margin_guideline"
                     app:layout_constraintTop_toBottomOf="@+id/main_activity_coordinated_motion_button" />
+
+                <Button
+                    android:id="@+id/main_activity_about_button"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginTop="24dp"
+                    android:text="About"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/main_activity_buttons_start_margin_guideline"
+                    app:layout_constraintTop_toBottomOf="@+id/main_activity_vector_button" />
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/main_activity_about_button"
+                    app:layout_constraintEnd_toStartOf="@+id/main_activity_buttons_start_margin_guideline"
+                    app:layout_constraintTop_toTopOf="@+id/main_activity_about_button"
+                    app:srcCompat="@drawable/ic_about" />
+
             </android.support.constraint.ConstraintLayout>
         </LinearLayout>
 
