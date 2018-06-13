@@ -2,7 +2,6 @@
 <resources>
     <string-array name="visibility_array">
         <item>VISIBLE</item>
-        <item>INVISIBLE</item>
         <item>GONE</item>
     </string-array>
 </resources>

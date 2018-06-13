@@ -46,9 +46,6 @@ public class ConstraintLayoutActivity extends AppCompatActivity
                 if (selectedVisibilityString.equals("VISIBLE"))
                 {
                     groupItems.setVisibility(View.VISIBLE);
-                } else if (selectedVisibilityString.equals("INVISIBLE"))
-                {
-                    groupItems.setVisibility(View.INVISIBLE);
                 } else if (selectedVisibilityString.equals("GONE"))
                 {
                     groupItems.setVisibility(View.GONE);
