@@ -20,7 +20,19 @@ public class CoordinatedMotionMenuActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_coordinated_motion_menu);
 
+        setUiButtonsReferences();
+        setButtonsListeners();
+    }
+
+    private void setUiButtonsReferences()
+    {
         buttonMovingCards = findViewById(R.id.coordinated_motion_menu_activity_moving_cards_button);
+        buttonTransformingSurfaces = findViewById(R.id.coordinated_motion_menu_activity_surfaces_button);
+        buttonCurvedMotion = findViewById(R.id.coordinated_motion_menu_activity_curved_motion_button);
+    }
+
+    private void setButtonsListeners()
+    {
         buttonMovingCards.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -31,7 +43,7 @@ public class CoordinatedMotionMenuActivity extends AppCompatActivity
             }
         });
 
-        buttonTransformingSurfaces = findViewById(R.id.coordinated_motion_menu_activity_surfaces_button);
+
         buttonTransformingSurfaces.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -42,7 +54,7 @@ public class CoordinatedMotionMenuActivity extends AppCompatActivity
             }
         });
 
-        buttonCurvedMotion = findViewById(R.id.coordinated_motion_menu_activity_curved_motion_button);
+
         buttonCurvedMotion.setOnClickListener(new View.OnClickListener()
         {
             @Override
