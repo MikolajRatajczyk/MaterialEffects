@@ -6,17 +6,21 @@
     android:layout_height="match_parent"
     tools:context=".vectors.AnimatedVectorDrawablesMenuActivity">
 
-    <Button
-        android:id="@+id/animated_vector_drawables_menu_activity_path_button"
+    <android.support.constraint.Guideline
+        android:id="@+id/animated_vector_drawables_menu_activity_buttons_start_margin_guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="16dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="64dp" />
+
+    <Button
+        android:id="@+id/animated_vector_drawables_menu_activity_path_button"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Go to animated path"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:text="Animated path"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/animated_vector_drawables_menu_activity_buttons_start_margin_guideline"
         app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>
