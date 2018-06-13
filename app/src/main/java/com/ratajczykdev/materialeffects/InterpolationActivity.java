@@ -16,6 +16,7 @@ import android.widget.TextView;
  */
 public class InterpolationActivity extends AppCompatActivity
 {
+    private final String LOG_TAG = InterpolationActivity.class.getSimpleName();
     private Spinner spinnerInterpolators;
     private Spinner spinnerDurations;
     private TextView textViewInterpolation;
@@ -23,7 +24,6 @@ public class InterpolationActivity extends AppCompatActivity
     private ArrayAdapter<CharSequence> arrayAdapterForDurationsSpinner;
     private Interpolator selectedInterpolator;
     private long selectedDuration;
-    private final String LOG_TAG = InterpolationActivity.class.getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState)

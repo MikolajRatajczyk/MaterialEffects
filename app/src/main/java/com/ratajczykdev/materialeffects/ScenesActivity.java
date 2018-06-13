@@ -36,7 +36,7 @@ public class ScenesActivity extends AppCompatActivity
             public void onClick(View view)
             {
                 //  custom transition between scenes
-                TransitionManager.go(Scene.getSceneForLayout(linearLayoutRoot, R.layout.activity_scenes_detailed, ScenesActivity.this),transition );
+                TransitionManager.go(Scene.getSceneForLayout(linearLayoutRoot, R.layout.activity_scenes_detailed, ScenesActivity.this), transition);
             }
         });
 

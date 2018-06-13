@@ -17,10 +17,10 @@ import com.ratajczykdev.materialeffects.R;
 public class TransformingSurfacesActivity extends AppCompatActivity
 {
 
-    private CardView cardViewSurface;
-    private Button buttonReset;
     private static final long SHORT_ANIMATION_TIME_IN_MS = 300L;
     private static final long LONG_ANIMATION_TIME_IN_MS = 600L;
+    private CardView cardViewSurface;
+    private Button buttonReset;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
