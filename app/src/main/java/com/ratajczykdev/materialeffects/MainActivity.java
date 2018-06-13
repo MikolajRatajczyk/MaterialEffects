@@ -30,7 +30,26 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        setButtonsUiReferences();
+        setButtonsListeners();
+    }
+
+    private void setButtonsUiReferences()
+    {
         buttonButtons = findViewById(R.id.main_activity_buttons_button);
+        buttonConstraintLayout = findViewById(R.id.main_activity_constraint_layout_button);
+        buttonMotion = findViewById(R.id.main_activity_motion_button);
+        buttonScenes = findViewById(R.id.main_activity_scenes_button);
+        buttonContentTransitions = findViewById(R.id.main_activity_content_transitions_button);
+        buttonSharedElementTransitions = findViewById(R.id.main_activity_shared_elements_transitions_button);
+        buttonInstructiveMotion = findViewById(R.id.main_activity_instructive_motion_button);
+        buttonInterpolation = findViewById(R.id.main_activity_interpolation_button);
+        buttonCoordinatedMotion = findViewById(R.id.main_activity_coordinated_motion_button);
+        buttonVector = findViewById(R.id.main_activity_vector_button);
+    }
+
+    private void setButtonsListeners()
+    {
         buttonButtons.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -41,7 +60,6 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
-        buttonConstraintLayout = findViewById(R.id.main_activity_constraint_layout_button);
         buttonConstraintLayout.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -52,7 +70,6 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
-        buttonMotion = findViewById(R.id.main_activity_motion_button);
         buttonMotion.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -63,7 +80,6 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
-        buttonScenes = findViewById(R.id.main_activity_scenes_button);
         buttonScenes.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -74,7 +90,6 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
-        buttonContentTransitions = findViewById(R.id.main_activity_content_transitions_button);
         buttonContentTransitions.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -88,7 +103,6 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
-        buttonSharedElementTransitions = findViewById(R.id.main_activity_shared_elements_transitions_button);
         buttonSharedElementTransitions.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -99,18 +113,6 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
-        buttonInstructiveMotion = findViewById(R.id.main_activity_instructive_motion_button);
-        buttonInstructiveMotion.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View view)
-            {
-                Intent intent = new Intent(MainActivity.this, InstructiveMotionActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        buttonInterpolation = findViewById(R.id.main_activity_interpolation_button);
         buttonInterpolation.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -121,7 +123,6 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
-        buttonCoordinatedMotion = findViewById(R.id.main_activity_coordinated_motion_button);
         buttonCoordinatedMotion.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -132,13 +133,22 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
-        buttonVector = findViewById(R.id.main_activity_vector_button);
         buttonVector.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View view)
             {
                 Intent intent = new Intent(MainActivity.this, AnimatedVectorDrawablesMenuActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        buttonInstructiveMotion.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+                Intent intent = new Intent(MainActivity.this, InstructiveMotionActivity.class);
                 startActivity(intent);
             }
         });
