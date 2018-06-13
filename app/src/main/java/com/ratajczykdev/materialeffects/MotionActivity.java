@@ -12,6 +12,7 @@ import android.widget.Button;
 public class MotionActivity extends AppCompatActivity
 {
     private Button buttonSlide;
+    private Button buttonReset;
     private ConstraintLayout constraintLayoutRoot;
 
     @Override
@@ -20,9 +21,21 @@ public class MotionActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_motion);
 
-        constraintLayoutRoot = findViewById(R.id.activity_motion_root);
+        setUiElementsReferences();
 
+        setButtonSlideListener();   // here is animation
+        setButtonResetListener();
+    }
+
+    private void setUiElementsReferences()
+    {
+        constraintLayoutRoot = findViewById(R.id.activity_motion_root);
         buttonSlide = findViewById(R.id.motion_activity_slide_button);
+        buttonReset = findViewById(R.id.motion_activity_reset_button);
+    }
+
+    private void setButtonSlideListener()
+    {
         buttonSlide.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -33,8 +46,26 @@ public class MotionActivity extends AppCompatActivity
 
                 TransitionManager.beginDelayedTransition(constraintLayoutRoot, slide);
                 buttonSlide.setVisibility(View.INVISIBLE);
-
             }
         });
     }
+
+    private void setButtonResetListener()
+    {
+        buttonReset.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+                buttonSlide.setVisibility(View.VISIBLE);
+
+                Slide slide = new Slide();
+                slide.setSlideEdge(Gravity.BOTTOM);
+
+                TransitionManager.beginDelayedTransition(constraintLayoutRoot, slide);
+            }
+        });
+    }
+
+
 }
