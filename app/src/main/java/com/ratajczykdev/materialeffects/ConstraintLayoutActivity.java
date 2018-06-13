@@ -32,6 +32,11 @@ public class ConstraintLayoutActivity extends AppCompatActivity
         groupItems = findViewById(R.id.constraint_layout_activity_items_group);
 
         spinnerVisibilityChanger = findViewById(R.id.constraint_layout_activity_visibility_spinner);
+
+        ArrayAdapter<CharSequence> spinnerArrayAdapter = ArrayAdapter.createFromResource(this, R.array.visibility_array, android.R.layout.simple_spinner_item);
+        spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerVisibilityChanger.setAdapter(spinnerArrayAdapter);
+
         spinnerVisibilityChanger.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener()
         {
             @Override
@@ -56,13 +61,11 @@ public class ConstraintLayoutActivity extends AppCompatActivity
                 Toast.makeText(ConstraintLayoutActivity.this, "Nothing was chosen", Toast.LENGTH_SHORT).show();
             }
         });
-        ArrayAdapter<CharSequence> spinnerArrayAdapter = ArrayAdapter.createFromResource(this, R.array.visibility_array, android.R.layout.simple_spinner_item);
-        spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinnerVisibilityChanger.setAdapter(spinnerArrayAdapter);
 
-        buttonChangeContent = findViewById(R.id.constraint_layout_activity_change_content_button);
         constraintLayoutRoot = findViewById(R.id.constraint_layout_activity_root);
         placeholder = findViewById(R.id.placeholder_image_template_main_item);
+
+        buttonChangeContent = findViewById(R.id.constraint_layout_activity_change_content_button);
         buttonChangeContent.setOnClickListener(new View.OnClickListener()
         {
             @Override
