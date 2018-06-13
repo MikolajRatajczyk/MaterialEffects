@@ -6,41 +6,43 @@
     android:layout_height="match_parent"
     tools:context=".coordinatedmotion.CoordinatedMotionMenuActivity">
 
-    <Button
-        android:id="@+id/coordinated_motion_menu_activity_moving_cards_button"
+    <android.support.constraint.Guideline
+        android:id="@+id/coordinated_motion_menu_activity_buttons_start_margin_guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="16dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="64dp" />
+
+    <Button
+        android:id="@+id/coordinated_motion_menu_activity_moving_cards_button"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Go to moving cards"
-        app:layout_constraintBottom_toTopOf="@+id/coordinated_motion_menu_activity_surfaces_button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:text="Moving cards"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/coordinated_motion_menu_activity_buttons_start_margin_guideline"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/coordinated_motion_menu_activity_surfaces_button"
+        style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="16dp"
-        android:text="Go to transforming surfaces"
-        app:layout_constraintBottom_toTopOf="@+id/coordinated_motion_menu_activity_curved_motion_button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:text="Transforming surfaces"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/coordinated_motion_menu_activity_buttons_start_margin_guideline"
         app:layout_constraintTop_toBottomOf="@+id/coordinated_motion_menu_activity_moving_cards_button" />
 
     <Button
         android:id="@+id/coordinated_motion_menu_activity_curved_motion_button"
+        style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="16dp"
-        android:text="Go to curved motion"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:text="Curved motion"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/coordinated_motion_menu_activity_buttons_start_margin_guideline"
         app:layout_constraintTop_toBottomOf="@+id/coordinated_motion_menu_activity_surfaces_button" />
 </android.support.constraint.ConstraintLayout>
