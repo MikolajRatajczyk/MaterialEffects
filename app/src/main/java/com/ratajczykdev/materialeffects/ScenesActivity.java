@@ -10,6 +10,9 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
+/**
+ * @author Mikołaj Ratajczyk <mikolaj.ratajczyk@gmail.com>
+ */
 public class ScenesActivity extends AppCompatActivity
 {
     private ImageButton imageButtonInfo;

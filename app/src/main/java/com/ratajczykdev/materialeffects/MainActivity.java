@@ -10,6 +10,9 @@ import android.widget.Button;
 import com.ratajczykdev.materialeffects.coordinatedmotion.CoordinatedMotionMenuActivity;
 import com.ratajczykdev.materialeffects.vectors.AnimatedVectorDrawablesMenuActivity;
 
+/**
+ * @author Mikołaj Ratajczyk <mikolaj.ratajczyk@gmail.com>
+ */
 public class MainActivity extends AppCompatActivity
 {
 

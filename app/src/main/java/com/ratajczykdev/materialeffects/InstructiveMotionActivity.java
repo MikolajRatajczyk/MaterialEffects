@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ScrollView;
 
+/**
+ * @author Mikołaj Ratajczyk <mikolaj.ratajczyk@gmail.com>
+ */
 public class InstructiveMotionActivity extends AppCompatActivity
 {
     private ScrollView scrollView;

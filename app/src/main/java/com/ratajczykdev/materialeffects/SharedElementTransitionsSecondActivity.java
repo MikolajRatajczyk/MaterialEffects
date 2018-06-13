@@ -1,8 +1,11 @@
 package com.ratajczykdev.materialeffects;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
+/**
+ * @author Mikołaj Ratajczyk <mikolaj.ratajczyk@gmail.com>
+ */
 public class SharedElementTransitionsSecondActivity extends AppCompatActivity
 {
 

@@ -11,6 +11,9 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+/**
+ * @author Mikołaj Ratajczyk <mikolaj.ratajczyk@gmail.com>
+ */
 public class InterpolationActivity extends AppCompatActivity
 {
     private Spinner spinnerInterpolators;

@@ -7,6 +7,9 @@ import android.transition.TransitionInflater;
 
 import com.ratajczykdev.materialeffects.R;
 
+/**
+ * @author Mikołaj Ratajczyk <mikolaj.ratajczyk@gmail.com>
+ */
 public class CurvedMotionDetailActivity extends AppCompatActivity
 {
 

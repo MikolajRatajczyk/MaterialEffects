@@ -9,6 +9,9 @@ import android.widget.LinearLayout;
 
 import com.ratajczykdev.materialeffects.R;
 
+/**
+ * @author Mikołaj Ratajczyk <mikolaj.ratajczyk@gmail.com>
+ */
 public class MovingCardsActivity extends AppCompatActivity
 {
     private LinearLayout linearLayoutCardsRoot;

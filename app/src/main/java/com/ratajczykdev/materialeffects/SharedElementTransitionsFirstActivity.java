@@ -8,6 +8,9 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+/**
+ * @author Mikołaj Ratajczyk <mikolaj.ratajczyk@gmail.com>
+ */
 public class SharedElementTransitionsFirstActivity extends AppCompatActivity
 {
     private ImageView imageStork;

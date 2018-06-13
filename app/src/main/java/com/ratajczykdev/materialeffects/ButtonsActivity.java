@@ -7,6 +7,9 @@ import android.view.View;
 import android.view.ViewAnimationUtils;
 import android.widget.Button;
 
+/**
+ * @author Mikołaj Ratajczyk <mikolaj.ratajczyk@gmail.com>
+ */
 public class ButtonsActivity extends AppCompatActivity
 {
     private Button buttonReveal;

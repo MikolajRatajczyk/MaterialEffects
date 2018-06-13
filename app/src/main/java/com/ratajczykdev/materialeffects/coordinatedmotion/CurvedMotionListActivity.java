@@ -9,6 +9,9 @@ import android.widget.FrameLayout;
 
 import com.ratajczykdev.materialeffects.R;
 
+/**
+ * @author Mikołaj Ratajczyk <mikolaj.ratajczyk@gmail.com>
+ */
 public class CurvedMotionListActivity extends AppCompatActivity
 {
     private FrameLayout frameLayoutItemRoot;

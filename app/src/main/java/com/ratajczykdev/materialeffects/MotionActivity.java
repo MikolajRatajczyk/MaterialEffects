@@ -9,6 +9,9 @@ import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 
+/**
+ * @author Mikołaj Ratajczyk <mikolaj.ratajczyk@gmail.com>
+ */
 public class MotionActivity extends AppCompatActivity
 {
     private Button buttonSlide;

@@ -9,6 +9,9 @@ import android.widget.ImageView;
 
 import com.ratajczykdev.materialeffects.R;
 
+/**
+ * @author Mikołaj Ratajczyk <mikolaj.ratajczyk@gmail.com>
+ */
 public class AnimatedPathActivity extends AppCompatActivity
 {
     private ImageView imageViewAnimatedItem;

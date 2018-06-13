@@ -13,6 +13,9 @@ import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+/**
+ * @author Mikołaj Ratajczyk <mikolaj.ratajczyk@gmail.com>
+ */
 public class ConstraintLayoutActivity extends AppCompatActivity
 {
 

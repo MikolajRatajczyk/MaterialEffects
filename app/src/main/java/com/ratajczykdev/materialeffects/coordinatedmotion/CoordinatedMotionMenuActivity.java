@@ -8,6 +8,9 @@ import android.widget.Button;
 
 import com.ratajczykdev.materialeffects.R;
 
+/**
+ * @author Mikołaj Ratajczyk <mikolaj.ratajczyk@gmail.com>
+ */
 public class CoordinatedMotionMenuActivity extends AppCompatActivity
 {
     private Button buttonMovingCards;

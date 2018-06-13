@@ -6,6 +6,9 @@ import android.transition.Slide;
 import android.view.Gravity;
 import android.view.animation.AnimationUtils;
 
+/**
+ * @author Mikołaj Ratajczyk <mikolaj.ratajczyk@gmail.com>
+ */
 public class ContentTransitionsActivity extends AppCompatActivity
 {
 
