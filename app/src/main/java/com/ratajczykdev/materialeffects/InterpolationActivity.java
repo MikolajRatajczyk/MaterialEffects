@@ -74,7 +74,7 @@ public class InterpolationActivity extends AppCompatActivity
         });
     }
 
-    Interpolator createInterpolatorForName(String name)
+    private Interpolator createInterpolatorForName(String name)
     {
         final String BASE_INTERPOLATOR_CLASS_PATH = "android.view.animation.";
         Interpolator interpolator = null;
@@ -90,7 +90,7 @@ public class InterpolationActivity extends AppCompatActivity
         return interpolator;
     }
 
-    void startTextViewAnimation()
+    private void startTextViewAnimation()
     {
         DisplayMetrics displayMetrics = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
