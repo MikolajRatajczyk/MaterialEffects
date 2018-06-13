@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".vectors.AnimatedPath">
+    tools:context=".vectors.AnimatedPathActivity">
 
     <ImageView
         android:id="@+id/animated_path_activity_animated_item_imageview"

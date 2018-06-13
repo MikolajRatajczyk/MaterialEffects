@@ -9,7 +9,7 @@ import android.widget.ImageView;
 
 import com.ratajczykdev.materialeffects.R;
 
-public class AnimatedPath extends AppCompatActivity
+public class AnimatedPathActivity extends AppCompatActivity
 {
     private ImageView imageViewAnimatedItem;
     private AnimatedVectorDrawable avdCrossToTick;

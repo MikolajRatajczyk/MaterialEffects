@@ -25,7 +25,7 @@ public class AnimatedVectorDrawablesMenuActivity extends AppCompatActivity
             @Override
             public void onClick(View view)
             {
-                Intent intent = new Intent(AnimatedVectorDrawablesMenuActivity.this, AnimatedPath.class);
+                Intent intent = new Intent(AnimatedVectorDrawablesMenuActivity.this, AnimatedPathActivity.class);
                 startActivity(intent);
             }
         });
