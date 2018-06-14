@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MaterialEffects</string>
+    <string name="app_name" translatable="false">MaterialEffects</string>
     <string name="buttons">Buttons</string>
     <string name="constraint_layout">Constraint layout</string>
     <string name="motion">Motion</string>
@@ -12,8 +12,8 @@
     <string name="animated_vector_drawables">Animated Vector Drawables</string>
     <string name="about">About</string>
     <string name="created_by_colon">Created by:</string>
-    <string name="mikolaj_ratajczyk">Mikołaj Ratajczyk</string>
-    <string name="mikolaj_ratajczyk_at_gmail_com">mikolaj.ratajczyk@gmail.com</string>
+    <string name="mikolaj_ratajczyk" translatable="false">Mikołaj Ratajczyk</string>
+    <string name="mikolaj_ratajczyk_at_gmail_com" translatable="false">mikolaj.ratajczyk@gmail.com</string>
     <string name="animated_path">Animated path</string>
     <string name="ripple_effect_on_a_custom_button">Ripple effect on a custom button</string>
     <string name="custom_button">Custom button</string>
