@@ -89,7 +89,7 @@ public class ConstraintLayoutActivity extends AppCompatActivity
             @Override
             public void onNothingSelected(AdapterView<?> adapterView)
             {
-                Toast.makeText(ConstraintLayoutActivity.this, "Nothing was chosen", Toast.LENGTH_SHORT).show();
+                Toast.makeText(ConstraintLayoutActivity.this, getString(R.string.toast_nothing_was_chosen), Toast.LENGTH_SHORT).show();
             }
         });
     }

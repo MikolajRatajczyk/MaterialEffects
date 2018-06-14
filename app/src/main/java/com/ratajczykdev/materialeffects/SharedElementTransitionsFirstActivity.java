@@ -21,7 +21,7 @@ public class SharedElementTransitionsFirstActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shared_element_transitions_first);
 
-        Toast.makeText(this, "The stork is clickable", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, getString(R.string.toast_stork_is_clickable), Toast.LENGTH_SHORT).show();
 
         imageStork = findViewById(R.id.shared_elements_transitions_first_activity_stork_image);
         imageStork.setOnClickListener(new View.OnClickListener()

@@ -42,4 +42,6 @@
     <string name="red_fox_short_description">The largest of the true foxes and one of the most widely distributed members of the order Carnivora.</string>
     <string name="red_fox">Red fox</string>
     <string name="red_fox_full_description">The red fox originated from smaller-sized ancestors from Eurasia during the Middle Villafranchian period, and colonised North America shortly after the Wisconsin glaciation. Among the true foxes, the red fox represents a more progressive form in the direction of carnivory. Apart from its large size, the red fox is distinguished from other fox species by its ability to adapt quickly to new environments. Despite its name, the species often produces individuals with other colourings, including albinos and melanists. Forty-five subspecies are currently recognised, which are divided into two categories: the large northern foxes, and the small, basal southern foxes of Asia and North Africa.</string>
+    <string name="toast_nothing_was_chosen">Nothing was chosen</string>
+    <string name="toast_stork_is_clickable">The stork is clickable</string>
 </resources>
