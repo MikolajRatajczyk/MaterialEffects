@@ -23,7 +23,7 @@ public class ConstraintLayoutActivity extends AppCompatActivity
     private Group groupItems;
     private Placeholder placeholder;
     private Button buttonChangeContent;
-    private ConstraintLayout constraintLayoutRoot;
+    private ConstraintLayout constraintLayoutPlaceholderRoot;
 
 
     @Override
@@ -41,7 +41,7 @@ public class ConstraintLayoutActivity extends AppCompatActivity
             @Override
             public void onClick(View view)
             {
-                TransitionManager.beginDelayedTransition(constraintLayoutRoot);
+                TransitionManager.beginDelayedTransition(constraintLayoutPlaceholderRoot);
                 placeholder.setContentId(view.getId());
             }
         });
@@ -49,7 +49,7 @@ public class ConstraintLayoutActivity extends AppCompatActivity
 
     private void setUiElementsReferences()
     {
-        constraintLayoutRoot = findViewById(R.id.constraint_layout_activity_root);
+        constraintLayoutPlaceholderRoot = findViewById(R.id.constraint_layout_activity_placeholder_space_view);
         groupItems = findViewById(R.id.constraint_layout_activity_items_group);
         spinnerVisibilityChanger = findViewById(R.id.constraint_layout_activity_visibility_spinner);
         buttonChangeContent = findViewById(R.id.constraint_layout_activity_change_content_button);
