@@ -53,7 +53,7 @@ public class AboutActivity extends AppCompatActivity
             public boolean onLongClick(View view)
             {
                 imageViewStar.animate()
-                        .rotation(FULL_ROTATION_IN_DEGREES)
+                        .rotation(imageViewStar.getRotation() + FULL_ROTATION_IN_DEGREES)
                         .setInterpolator(AnimationUtils.loadInterpolator(AboutActivity.this, android.R.interpolator.bounce))
                         .setDuration(ROTATION_ANIMATION_DURATION_IN_MS)
                         .start();
