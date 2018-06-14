@@ -8,7 +8,7 @@
 
     <ImageView
         android:id="@+id/instructive_motion_activity_golden_gate_image"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="400dp"
         android:scaleType="centerCrop"
         app:srcCompat="@drawable/image_golden_gate" />
