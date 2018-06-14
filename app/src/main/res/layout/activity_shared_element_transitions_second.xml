@@ -10,6 +10,7 @@
         android:id="@+id/shared_elements_transitions_second_activity_stork_image"
         android:layout_width="0dp"
         android:layout_height="200dp"
+        android:contentDescription="@string/content_description_flying_stork"
         android:scaleType="centerCrop"
         android:transitionName="stork_to_transition"
         app:layout_constraintEnd_toEndOf="parent"

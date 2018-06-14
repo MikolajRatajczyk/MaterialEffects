@@ -44,4 +44,27 @@
     <string name="red_fox_full_description">The red fox originated from smaller-sized ancestors from Eurasia during the Middle Villafranchian period, and colonised North America shortly after the Wisconsin glaciation. Among the true foxes, the red fox represents a more progressive form in the direction of carnivory. Apart from its large size, the red fox is distinguished from other fox species by its ability to adapt quickly to new environments. Despite its name, the species often produces individuals with other colourings, including albinos and melanists. Forty-five subspecies are currently recognised, which are divided into two categories: the large northern foxes, and the small, basal southern foxes of Asia and North Africa.</string>
     <string name="toast_nothing_was_chosen">Nothing was chosen</string>
     <string name="toast_stork_is_clickable">The stork is clickable</string>
+    <string name="content_description_the_cross">the cross</string>
+    <string name="content_description_strawberries">strawberries</string>
+    <string name="content_description_koblenz_panorama">Koblenz panorama</string>
+    <string name="content_description_stairs">stairs</string>
+    <string name="content_description_flying_stork">flying stork</string>
+    <string name="content_description_button">button</string>
+    <string name="content_description_constraint_layout">constraint layout</string>
+    <string name="content_description_motion">motion</string>
+    <string name="content_description_content_transitions">content transitions</string>
+    <string name="content_description_shared_elements_transitions">shared elements transitions</string>
+    <string name="content_description_instructive_motion">instructive motion</string>
+    <string name="content_description_interpolation">interpolation</string>
+    <string name="content_description_coordinated_motion">coordinated motion</string>
+    <string name="content_description_animated_vector_drawables">animated vector drawables</string>
+    <string name="content_description_about">about</string>
+    <string name="content_description_scenes">scenes</string>
+    <string name="content_description_aurora">Aurora</string>
+    <string name="content_description_golden_gate_bridge">Golden Gate Bridge</string>
+    <string name="content_description_red_fox">Red Fox</string>
+    <string name="content_description_information">information</string>
+    <string name="content_description_close">close</string>
+    <string name="content_description_a_parrot">A parrot</string>
+    <string name="content_description_application_star_icon">Application star icon</string>
 </resources>

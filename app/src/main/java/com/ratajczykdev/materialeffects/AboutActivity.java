@@ -13,11 +13,11 @@ import android.widget.TextView;
  */
 public class AboutActivity extends AppCompatActivity
 {
+    private static final int EXPLODE_TRANSITION_DURATION_IN_MS = 1000;
     private ImageView imageViewStar;
     private TextView textViewCreatedBy;
     private TextView textViewNameSurname;
     private TextView textViewEmail;
-    private static final int EXPLODE_TRANSITION_DURATION_IN_MS = 1000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)

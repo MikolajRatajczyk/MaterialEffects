@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--Custom transition for elements of ScenesActivity-->
+<?xml version="1.0" encoding="utf-8"?><!--Custom transition for elements of ScenesActivity-->
 <transitionSet xmlns:android="http://schemas.android.com/apk/res/android"
     android:transitionOrdering="together">
 
@@ -8,7 +7,9 @@
             <target android:targetId="@id/scenes_activity_fox_image" />
         </targets>
     </changeBounds>
-    <changeBounds android:duration="150" android:startDelay="100">
+    <changeBounds
+        android:duration="150"
+        android:startDelay="100">
         <targets>
             <target android:targetId="@id/scenes_activity_bar_root" />
         </targets>
