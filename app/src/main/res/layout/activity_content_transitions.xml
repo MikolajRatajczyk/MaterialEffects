@@ -8,7 +8,7 @@
 
     <ImageView
         android:id="@+id/content_transitions_activity_aurora_image"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="250dp"
         android:contentDescription="@string/content_description_aurora"
         android:scaleType="centerCrop"
