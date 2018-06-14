@@ -32,7 +32,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:elevation="8dp"
-            android:text="Slide"
+            android:text="@string/slide"
             android:textSize="36sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -47,7 +47,7 @@
             android:layout_marginBottom="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginStart="16dp"
-            android:text="Reset"
+            android:text="@string/reset"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />

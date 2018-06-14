@@ -19,7 +19,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Moving cards"
+        android:text="@string/moving_cards"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/coordinated_motion_menu_activity_buttons_start_margin_guideline"
         app:layout_constraintTop_toTopOf="parent" />
@@ -30,7 +30,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Transforming surfaces"
+        android:text="@string/transforming_surfaces"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/coordinated_motion_menu_activity_buttons_start_margin_guideline"
         app:layout_constraintTop_toBottomOf="@+id/coordinated_motion_menu_activity_moving_cards_button" />
@@ -41,7 +41,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Curved motion"
+        android:text="@string/curved_motion"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/coordinated_motion_menu_activity_buttons_start_margin_guideline"
         app:layout_constraintTop_toBottomOf="@+id/coordinated_motion_menu_activity_surfaces_button" />

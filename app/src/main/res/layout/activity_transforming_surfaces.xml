@@ -35,7 +35,7 @@
         android:layout_marginStart="16dp"
         android:elevation="8dp"
         android:padding="8dp"
-        android:text="Reset"
+        android:text="@string/reset"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"

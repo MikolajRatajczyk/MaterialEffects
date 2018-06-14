@@ -19,7 +19,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Animated path"
+        android:text="@string/animated_path"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/animated_vector_drawables_menu_activity_buttons_start_margin_guideline"
         app:layout_constraintTop_toTopOf="parent" />

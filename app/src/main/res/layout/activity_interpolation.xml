@@ -70,7 +70,7 @@
             android:background="#fff"
             android:elevation="8dp"
             android:padding="8dp"
-            android:text="Interpolation example"
+            android:text="@string/interpolation_example"
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
