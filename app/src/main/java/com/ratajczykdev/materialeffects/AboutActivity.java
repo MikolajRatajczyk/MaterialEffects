@@ -3,6 +3,7 @@ package com.ratajczykdev.materialeffects;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.transition.Explode;
+import android.view.View;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -38,5 +39,26 @@ public class AboutActivity extends AppCompatActivity
         explode.addTarget(textViewNameSurname);
         explode.addTarget(textViewEmail);
         getWindow().setEnterTransition(explode);
+
+        setEasterEgg();
+    }
+
+    private void setEasterEgg()
+    {
+        final int FULL_ROTATION_IN_DEGREES = 360;
+        final int ROTATION_ANIMATION_DURATION_IN_MS = 5000;
+        imageViewStar.setOnLongClickListener(new View.OnLongClickListener()
+        {
+            @Override
+            public boolean onLongClick(View view)
+            {
+                imageViewStar.animate()
+                        .rotation(FULL_ROTATION_IN_DEGREES)
+                        .setInterpolator(AnimationUtils.loadInterpolator(AboutActivity.this, android.R.interpolator.bounce))
+                        .setDuration(ROTATION_ANIMATION_DURATION_IN_MS)
+                        .start();
+                return true;
+            }
+        });
     }
 }
