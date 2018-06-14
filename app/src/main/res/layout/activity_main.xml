@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,279 +7,262 @@
     tools:context=".MainActivity">
 
 
-    <ScrollView
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <android.support.constraint.Guideline
+            android:id="@+id/main_activity_buttons_start_margin_guideline"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="64dp" />
 
-            <android.support.constraint.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+        <ImageButton
+            android:id="@+id/main_activity_buttons_icon_imageview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:background="?android:selectableItemBackground"
+            app:layout_constraintBottom_toBottomOf="@+id/main_activity_buttons_button"
+            app:layout_constraintEnd_toStartOf="@+id/main_activity_buttons_button"
+            app:layout_constraintTop_toTopOf="@+id/main_activity_buttons_button"
+            app:srcCompat="@drawable/ic_button" />
 
-                <android.support.constraint.Guideline
-                    android:id="@+id/main_activity_buttons_start_margin_guideline"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    app:layout_constraintGuide_begin="64dp" />
+        <Button
+            android:id="@+id/main_activity_buttons_button"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/buttons"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/main_activity_buttons_start_margin_guideline"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
 
-                <ImageButton
-                    android:id="@+id/main_activity_buttons_icon_imageview"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:background="?android:selectableItemBackground"
-                    app:layout_constraintBottom_toBottomOf="@+id/main_activity_buttons_button"
-                    app:layout_constraintEnd_toStartOf="@+id/main_activity_buttons_button"
-                    app:layout_constraintTop_toTopOf="@+id/main_activity_buttons_button"
-                    app:srcCompat="@drawable/ic_button" />
+        <ImageButton
+            android:id="@+id/main_activity_constraint_layout_icon_imageview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:background="?android:selectableItemBackground"
+            app:layout_constraintBottom_toBottomOf="@+id/main_activity_constraint_layout_button"
+            app:layout_constraintEnd_toStartOf="@+id/main_activity_buttons_start_margin_guideline"
+            app:layout_constraintTop_toTopOf="@+id/main_activity_constraint_layout_button"
+            app:srcCompat="@drawable/ic_constraint_layout" />
 
-                <Button
-                    android:id="@+id/main_activity_buttons_button"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:text="@string/buttons"
-                    android:textSize="16sp"
-                    app:layout_constraintStart_toStartOf="@+id/main_activity_buttons_start_margin_guideline"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_chainStyle="packed" />
+        <Button
+            android:id="@+id/main_activity_constraint_layout_button"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/constraint_layout"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/main_activity_buttons_start_margin_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/main_activity_buttons_button" />
 
-                <ImageButton
-                    android:id="@+id/main_activity_constraint_layout_icon_imageview"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:background="?android:selectableItemBackground"
-                    app:layout_constraintBottom_toBottomOf="@+id/main_activity_constraint_layout_button"
-                    app:layout_constraintEnd_toStartOf="@+id/main_activity_buttons_start_margin_guideline"
-                    app:layout_constraintTop_toTopOf="@+id/main_activity_constraint_layout_button"
-                    app:srcCompat="@drawable/ic_constraint_layout" />
+        <ImageButton
+            android:id="@+id/main_activity_motion_icon_imageview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:background="?android:selectableItemBackground"
+            app:layout_constraintBottom_toBottomOf="@+id/main_activity_motion_button"
+            app:layout_constraintEnd_toStartOf="@+id/main_activity_buttons_start_margin_guideline"
+            app:layout_constraintTop_toTopOf="@+id/main_activity_motion_button"
+            app:srcCompat="@drawable/ic_motion" />
 
-                <Button
-                    android:id="@+id/main_activity_constraint_layout_button"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:text="@string/constraint_layout"
-                    android:textSize="16sp"
-                    app:layout_constraintStart_toStartOf="@+id/main_activity_buttons_start_margin_guideline"
-                    app:layout_constraintTop_toBottomOf="@+id/main_activity_buttons_button" />
+        <Button
+            android:id="@+id/main_activity_motion_button"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/motion"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/main_activity_buttons_start_margin_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/main_activity_constraint_layout_button" />
 
-                <ImageButton
-                    android:id="@+id/main_activity_motion_icon_imageview"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:background="?android:selectableItemBackground"
-                    app:layout_constraintBottom_toBottomOf="@+id/main_activity_motion_button"
-                    app:layout_constraintEnd_toStartOf="@+id/main_activity_buttons_start_margin_guideline"
-                    app:layout_constraintTop_toTopOf="@+id/main_activity_motion_button"
-                    app:srcCompat="@drawable/ic_motion" />
+        <ImageButton
+            android:id="@+id/main_activity_scenes_icon_imageview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:background="?android:selectableItemBackground"
+            app:layout_constraintBottom_toBottomOf="@+id/main_activity_scenes_button"
+            app:layout_constraintEnd_toStartOf="@+id/main_activity_buttons_start_margin_guideline"
+            app:layout_constraintTop_toTopOf="@+id/main_activity_scenes_button"
+            app:srcCompat="@drawable/ic_scenes" />
 
-                <Button
-                    android:id="@+id/main_activity_motion_button"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:text="@string/motion"
-                    android:textSize="16sp"
-                    app:layout_constraintStart_toStartOf="@+id/main_activity_buttons_start_margin_guideline"
-                    app:layout_constraintTop_toBottomOf="@+id/main_activity_constraint_layout_button" />
+        <Button
+            android:id="@+id/main_activity_scenes_button"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/scenes"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/main_activity_buttons_start_margin_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/main_activity_motion_button" />
 
-                <ImageButton
-                    android:id="@+id/main_activity_scenes_icon_imageview"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:background="?android:selectableItemBackground"
-                    app:layout_constraintBottom_toBottomOf="@+id/main_activity_scenes_button"
-                    app:layout_constraintEnd_toStartOf="@+id/main_activity_buttons_start_margin_guideline"
-                    app:layout_constraintTop_toTopOf="@+id/main_activity_scenes_button"
-                    app:srcCompat="@drawable/ic_scenes" />
+        <ImageButton
+            android:id="@+id/main_activity_content_transitions_icon_imageview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:background="?android:selectableItemBackground"
+            app:layout_constraintBottom_toBottomOf="@+id/main_activity_content_transitions_button"
+            app:layout_constraintEnd_toStartOf="@+id/main_activity_content_transitions_button"
+            app:layout_constraintTop_toTopOf="@+id/main_activity_content_transitions_button"
+            app:srcCompat="@drawable/ic_content_transitions" />
 
-                <Button
-                    android:id="@+id/main_activity_scenes_button"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:text="@string/scenes"
-                    android:textSize="16sp"
-                    app:layout_constraintStart_toStartOf="@+id/main_activity_buttons_start_margin_guideline"
-                    app:layout_constraintTop_toBottomOf="@+id/main_activity_motion_button" />
+        <Button
+            android:id="@+id/main_activity_content_transitions_button"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/content_transitions"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/main_activity_buttons_start_margin_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/main_activity_scenes_button" />
 
-                <ImageButton
-                    android:id="@+id/main_activity_content_transitions_icon_imageview"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:background="?android:selectableItemBackground"
-                    app:layout_constraintBottom_toBottomOf="@+id/main_activity_content_transitions_button"
-                    app:layout_constraintEnd_toStartOf="@+id/main_activity_content_transitions_button"
-                    app:layout_constraintTop_toTopOf="@+id/main_activity_content_transitions_button"
-                    app:srcCompat="@drawable/ic_content_transitions" />
+        <ImageButton
+            android:id="@+id/main_activity_shared_element_transitions_icon_imageview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:background="?android:selectableItemBackground"
+            app:layout_constraintBottom_toBottomOf="@+id/main_activity_shared_elements_transitions_button"
+            app:layout_constraintEnd_toStartOf="@+id/main_activity_buttons_start_margin_guideline"
+            app:layout_constraintTop_toTopOf="@+id/main_activity_shared_elements_transitions_button"
+            app:srcCompat="@drawable/ic_shared_elements_transitions" />
 
-                <Button
-                    android:id="@+id/main_activity_content_transitions_button"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:text="@string/content_transitions"
-                    android:textSize="16sp"
-                    app:layout_constraintStart_toStartOf="@+id/main_activity_buttons_start_margin_guideline"
-                    app:layout_constraintTop_toBottomOf="@+id/main_activity_scenes_button" />
+        <Button
+            android:id="@+id/main_activity_shared_elements_transitions_button"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/shared_elements_transitions"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/main_activity_buttons_start_margin_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/main_activity_content_transitions_button" />
 
-                <ImageButton
-                    android:id="@+id/main_activity_shared_element_transitions_icon_imageview"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:background="?android:selectableItemBackground"
-                    app:layout_constraintBottom_toBottomOf="@+id/main_activity_shared_elements_transitions_button"
-                    app:layout_constraintEnd_toStartOf="@+id/main_activity_buttons_start_margin_guideline"
-                    app:layout_constraintTop_toTopOf="@+id/main_activity_shared_elements_transitions_button"
-                    app:srcCompat="@drawable/ic_shared_elements_transitions" />
+        <ImageButton
+            android:id="@+id/main_activity_instructive_motion_icon_imageview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:background="?android:selectableItemBackground"
+            app:layout_constraintBottom_toBottomOf="@+id/main_activity_instructive_motion_button"
+            app:layout_constraintEnd_toStartOf="@+id/main_activity_instructive_motion_button"
+            app:layout_constraintTop_toTopOf="@+id/main_activity_instructive_motion_button"
+            app:srcCompat="@drawable/ic_instructive_motion" />
 
-                <Button
-                    android:id="@+id/main_activity_shared_elements_transitions_button"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:text="@string/shared_elements_transitions"
-                    android:textSize="16sp"
-                    app:layout_constraintStart_toStartOf="@+id/main_activity_buttons_start_margin_guideline"
-                    app:layout_constraintTop_toBottomOf="@+id/main_activity_content_transitions_button" />
+        <Button
+            android:id="@+id/main_activity_instructive_motion_button"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/instructive_motion"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/main_activity_buttons_start_margin_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/main_activity_shared_elements_transitions_button" />
 
-                <ImageButton
-                    android:id="@+id/main_activity_instructive_motion_icon_imageview"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:background="?android:selectableItemBackground"
-                    app:layout_constraintBottom_toBottomOf="@+id/main_activity_instructive_motion_button"
-                    app:layout_constraintEnd_toStartOf="@+id/main_activity_instructive_motion_button"
-                    app:layout_constraintTop_toTopOf="@+id/main_activity_instructive_motion_button"
-                    app:srcCompat="@drawable/ic_instructive_motion" />
+        <ImageButton
+            android:id="@+id/main_activity_interpolation_icon_imageview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:background="?android:selectableItemBackground"
+            app:layout_constraintBottom_toBottomOf="@+id/main_activity_interpolation_button"
+            app:layout_constraintEnd_toStartOf="@+id/main_activity_buttons_start_margin_guideline"
+            app:layout_constraintTop_toTopOf="@+id/main_activity_interpolation_button"
+            app:srcCompat="@drawable/ic_interpolation" />
 
-                <Button
-                    android:id="@+id/main_activity_instructive_motion_button"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:text="@string/instructive_motion"
-                    android:textSize="16sp"
-                    app:layout_constraintStart_toStartOf="@+id/main_activity_buttons_start_margin_guideline"
-                    app:layout_constraintTop_toBottomOf="@+id/main_activity_shared_elements_transitions_button" />
+        <Button
+            android:id="@+id/main_activity_interpolation_button"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/interpolation"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/main_activity_buttons_start_margin_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/main_activity_instructive_motion_button" />
 
-                <ImageButton
-                    android:id="@+id/main_activity_interpolation_icon_imageview"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:background="?android:selectableItemBackground"
-                    app:layout_constraintBottom_toBottomOf="@+id/main_activity_interpolation_button"
-                    app:layout_constraintEnd_toStartOf="@+id/main_activity_buttons_start_margin_guideline"
-                    app:layout_constraintTop_toTopOf="@+id/main_activity_interpolation_button"
-                    app:srcCompat="@drawable/ic_interpolation" />
+        <ImageButton
+            android:id="@+id/main_activity_coordianted_motion_icon_imageview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:background="?android:selectableItemBackground"
+            app:layout_constraintBottom_toBottomOf="@+id/main_activity_coordinated_motion_button"
+            app:layout_constraintEnd_toStartOf="@+id/main_activity_coordinated_motion_button"
+            app:layout_constraintTop_toTopOf="@+id/main_activity_coordinated_motion_button"
+            app:srcCompat="@drawable/ic_coordianted_motion" />
 
-                <Button
-                    android:id="@+id/main_activity_interpolation_button"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:text="@string/interpolation"
-                    android:textSize="16sp"
-                    app:layout_constraintStart_toStartOf="@+id/main_activity_buttons_start_margin_guideline"
-                    app:layout_constraintTop_toBottomOf="@+id/main_activity_instructive_motion_button" />
+        <Button
+            android:id="@+id/main_activity_coordinated_motion_button"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/coordinated_motion"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/main_activity_buttons_start_margin_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/main_activity_interpolation_button" />
 
-                <ImageButton
-                    android:id="@+id/main_activity_coordianted_motion_icon_imageview"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:background="?android:selectableItemBackground"
-                    app:layout_constraintBottom_toBottomOf="@+id/main_activity_coordinated_motion_button"
-                    app:layout_constraintEnd_toStartOf="@+id/main_activity_coordinated_motion_button"
-                    app:layout_constraintTop_toTopOf="@+id/main_activity_coordinated_motion_button"
-                    app:srcCompat="@drawable/ic_coordianted_motion" />
+        <ImageButton
+            android:id="@+id/main_activity_animated_vector_drawables_icon_imageview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:background="?android:selectableItemBackground"
+            app:layout_constraintBottom_toBottomOf="@+id/main_activity_vector_button"
+            app:layout_constraintEnd_toStartOf="@+id/main_activity_vector_button"
+            app:layout_constraintTop_toTopOf="@+id/main_activity_vector_button"
+            app:srcCompat="@drawable/ic_animated_vector_drawables" />
 
-                <Button
-                    android:id="@+id/main_activity_coordinated_motion_button"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:text="@string/coordinated_motion"
-                    android:textSize="16sp"
-                    app:layout_constraintStart_toStartOf="@+id/main_activity_buttons_start_margin_guideline"
-                    app:layout_constraintTop_toBottomOf="@+id/main_activity_interpolation_button" />
+        <Button
+            android:id="@+id/main_activity_vector_button"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/animated_vector_drawables"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/main_activity_buttons_start_margin_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/main_activity_coordinated_motion_button" />
 
-                <ImageButton
-                    android:id="@+id/main_activity_animated_vector_drawables_icon_imageview"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:background="?android:selectableItemBackground"
-                    app:layout_constraintBottom_toBottomOf="@+id/main_activity_vector_button"
-                    app:layout_constraintEnd_toStartOf="@+id/main_activity_vector_button"
-                    app:layout_constraintTop_toTopOf="@+id/main_activity_vector_button"
-                    app:srcCompat="@drawable/ic_animated_vector_drawables" />
+        <Button
+            android:id="@+id/main_activity_about_button"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/about"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/main_activity_buttons_start_margin_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/main_activity_vector_button" />
 
-                <Button
-                    android:id="@+id/main_activity_vector_button"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:text="@string/animated_vector_drawables"
-                    android:textSize="16sp"
-                    app:layout_constraintStart_toStartOf="@+id/main_activity_buttons_start_margin_guideline"
-                    app:layout_constraintTop_toBottomOf="@+id/main_activity_coordinated_motion_button" />
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/main_activity_about_button"
+            app:layout_constraintEnd_toStartOf="@+id/main_activity_buttons_start_margin_guideline"
+            app:layout_constraintTop_toTopOf="@+id/main_activity_about_button"
+            app:srcCompat="@drawable/ic_about" />
 
-                <Button
-                    android:id="@+id/main_activity_about_button"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="16dp"
-                    android:layout_marginTop="24dp"
-                    android:text="@string/about"
-                    android:textSize="16sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="@+id/main_activity_buttons_start_margin_guideline"
-                    app:layout_constraintTop_toBottomOf="@+id/main_activity_vector_button" />
+    </android.support.constraint.ConstraintLayout>
 
-                <ImageView
-                    android:id="@+id/imageView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    app:layout_constraintBottom_toBottomOf="@+id/main_activity_about_button"
-                    app:layout_constraintEnd_toStartOf="@+id/main_activity_buttons_start_margin_guideline"
-                    app:layout_constraintTop_toTopOf="@+id/main_activity_about_button"
-                    app:srcCompat="@drawable/ic_about" />
 
-            </android.support.constraint.ConstraintLayout>
-        </LinearLayout>
-
-    </ScrollView>
-
-</android.support.constraint.ConstraintLayout>
+</ScrollView>
