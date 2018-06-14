@@ -164,7 +164,9 @@ public class MainActivity extends AppCompatActivity
             public void onClick(View view)
             {
                 Intent intent = new Intent(MainActivity.this, AboutActivity.class);
-                startActivity(intent);
+                //  to start content transition in AboutActivity
+                Bundle bundle = ActivityOptions.makeSceneTransitionAnimation(MainActivity.this).toBundle();
+                startActivity(intent, bundle);
             }
         });
     }

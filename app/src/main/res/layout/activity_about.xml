@@ -2,8 +2,65 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/about_activity_root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AboutActivity">
+
+
+    <ImageView
+        android:id="@+id/about_activity_star_imageview"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/shape_about_star_background_oval"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3"
+        app:srcCompat="@drawable/ic_about_star" />
+
+    <TextView
+        android:id="@+id/about_activity_created_by_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:text="Created by:"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/about_activity_star_imageview" />
+
+    <TextView
+        android:id="@+id/about_activity_name_surname_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Mikołaj Ratajczyk"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/about_activity_created_by_textview"
+        app:layout_constraintStart_toStartOf="@+id/about_activity_created_by_textview"
+        app:layout_constraintTop_toBottomOf="@+id/about_activity_created_by_textview" />
+
+    <TextView
+        android:id="@+id/about_activity_email_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:text="mikolaj.ratajczyk@gmail.com"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/about_activity_name_surname_textview"
+        app:layout_constraintStart_toStartOf="@+id/about_activity_name_surname_textview"
+        app:layout_constraintTop_toBottomOf="@+id/about_activity_name_surname_textview" />
 
 </android.support.constraint.ConstraintLayout>
