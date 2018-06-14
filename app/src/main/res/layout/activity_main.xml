@@ -50,7 +50,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:text="Buttons"
+                    android:text="@string/buttons"
                     android:textSize="16sp"
                     app:layout_constraintStart_toStartOf="@+id/main_activity_buttons_start_margin_guideline"
                     app:layout_constraintTop_toTopOf="parent"
@@ -73,7 +73,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:text="Constraint layout"
+                    android:text="@string/constraint_layout"
                     android:textSize="16sp"
                     app:layout_constraintStart_toStartOf="@+id/main_activity_buttons_start_margin_guideline"
                     app:layout_constraintTop_toBottomOf="@+id/main_activity_buttons_button" />
@@ -95,7 +95,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:text="Motion"
+                    android:text="@string/motion"
                     android:textSize="16sp"
                     app:layout_constraintStart_toStartOf="@+id/main_activity_buttons_start_margin_guideline"
                     app:layout_constraintTop_toBottomOf="@+id/main_activity_constraint_layout_button" />
@@ -117,7 +117,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:text="Scenes"
+                    android:text="@string/scenes"
                     android:textSize="16sp"
                     app:layout_constraintStart_toStartOf="@+id/main_activity_buttons_start_margin_guideline"
                     app:layout_constraintTop_toBottomOf="@+id/main_activity_motion_button" />
@@ -139,7 +139,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:text="Content transitions"
+                    android:text="@string/content_transitions"
                     android:textSize="16sp"
                     app:layout_constraintStart_toStartOf="@+id/main_activity_buttons_start_margin_guideline"
                     app:layout_constraintTop_toBottomOf="@+id/main_activity_scenes_button" />
@@ -161,7 +161,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:text="Shared elements transitions"
+                    android:text="@string/shared_elements_transitions"
                     android:textSize="16sp"
                     app:layout_constraintStart_toStartOf="@+id/main_activity_buttons_start_margin_guideline"
                     app:layout_constraintTop_toBottomOf="@+id/main_activity_content_transitions_button" />
@@ -183,7 +183,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:text="Instructive motion"
+                    android:text="@string/instructive_motion"
                     android:textSize="16sp"
                     app:layout_constraintStart_toStartOf="@+id/main_activity_buttons_start_margin_guideline"
                     app:layout_constraintTop_toBottomOf="@+id/main_activity_shared_elements_transitions_button" />
@@ -205,7 +205,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:text="Interpolation"
+                    android:text="@string/interpolation"
                     android:textSize="16sp"
                     app:layout_constraintStart_toStartOf="@+id/main_activity_buttons_start_margin_guideline"
                     app:layout_constraintTop_toBottomOf="@+id/main_activity_instructive_motion_button" />
@@ -227,7 +227,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:text="Coordinated motion"
+                    android:text="@string/coordinated_motion"
                     android:textSize="16sp"
                     app:layout_constraintStart_toStartOf="@+id/main_activity_buttons_start_margin_guideline"
                     app:layout_constraintTop_toBottomOf="@+id/main_activity_interpolation_button" />
@@ -249,7 +249,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:text="Animated Vector Drawables"
+                    android:text="@string/animated_vector_drawables"
                     android:textSize="16sp"
                     app:layout_constraintStart_toStartOf="@+id/main_activity_buttons_start_margin_guideline"
                     app:layout_constraintTop_toBottomOf="@+id/main_activity_coordinated_motion_button" />
@@ -261,7 +261,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
                     android:layout_marginTop="24dp"
-                    android:text="About"
+                    android:text="@string/about"
                     android:textSize="16sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="@+id/main_activity_buttons_start_margin_guideline"

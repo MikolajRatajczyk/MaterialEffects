@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">MaterialEffects</string>
+    <string name="buttons">Buttons</string>
+    <string name="constraint_layout">Constraint layout</string>
+    <string name="motion">Motion</string>
+    <string name="scenes">Scenes</string>
+    <string name="content_transitions">Content transitions</string>
+    <string name="shared_elements_transitions">Shared elements transitions</string>
+    <string name="instructive_motion">Instructive motion</string>
+    <string name="interpolation">Interpolation</string>
+    <string name="coordinated_motion">Coordinated motion</string>
+    <string name="animated_vector_drawables">Animated Vector Drawables</string>
+    <string name="about">About</string>
 </resources>
