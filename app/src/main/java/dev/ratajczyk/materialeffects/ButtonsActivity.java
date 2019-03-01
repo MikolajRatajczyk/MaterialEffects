@@ -1,4 +1,4 @@
-package com.ratajczykdev.materialeffects;
+package dev.ratajczyk.materialeffects;
 
 import android.animation.Animator;
 import android.os.Bundle;
@@ -10,22 +10,18 @@ import android.widget.Button;
 /**
  * @author Mikołaj Ratajczyk <mikolaj.ratajczyk@gmail.com>
  */
-public class ButtonsActivity extends AppCompatActivity
-{
+public class ButtonsActivity extends AppCompatActivity {
     private Button buttonReveal;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_buttons);
 
         buttonReveal = findViewById(R.id.buttons_activity_reveal_button);
-        buttonReveal.setOnClickListener(new View.OnClickListener()
-        {
+        buttonReveal.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view)
-            {
+            public void onClick(View view) {
                 int buttonCenterX = view.getWidth() / 2;
                 int buttonCenterY = view.getHeight() / 2;
                 float startRadius = 0;

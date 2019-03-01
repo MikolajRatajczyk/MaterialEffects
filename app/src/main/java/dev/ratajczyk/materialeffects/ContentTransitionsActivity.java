@@ -1,4 +1,4 @@
-package com.ratajczykdev.materialeffects;
+package dev.ratajczyk.materialeffects;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -9,12 +9,10 @@ import android.view.animation.AnimationUtils;
 /**
  * @author Mikołaj Ratajczyk <mikolaj.ratajczyk@gmail.com>
  */
-public class ContentTransitionsActivity extends AppCompatActivity
-{
+public class ContentTransitionsActivity extends AppCompatActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_content_transitions);
 

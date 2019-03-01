@@ -1,4 +1,4 @@
-package com.ratajczykdev.materialeffects;
+package dev.ratajczyk.materialeffects;
 
 import org.junit.Test;
 

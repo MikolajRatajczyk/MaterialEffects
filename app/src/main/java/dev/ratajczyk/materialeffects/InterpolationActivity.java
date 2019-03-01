@@ -1,4 +1,4 @@
-package com.ratajczykdev.materialeffects;
+package dev.ratajczyk.materialeffects;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -14,8 +14,7 @@ import android.widget.TextView;
 /**
  * @author Mikołaj Ratajczyk <mikolaj.ratajczyk@gmail.com>
  */
-public class InterpolationActivity extends AppCompatActivity
-{
+public class InterpolationActivity extends AppCompatActivity {
     private final String LOG_TAG = InterpolationActivity.class.getSimpleName();
     private Spinner spinnerInterpolators;
     private Spinner spinnerDurations;
@@ -26,8 +25,7 @@ public class InterpolationActivity extends AppCompatActivity
     private long selectedDuration;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_interpolation);
 
@@ -37,15 +35,13 @@ public class InterpolationActivity extends AppCompatActivity
         configureSpinnerDurations();
     }
 
-    private void setUiElementsReferences()
-    {
+    private void setUiElementsReferences() {
         spinnerInterpolators = findViewById(R.id.interpolation_activity_interpolators_spinner);
         spinnerDurations = findViewById(R.id.interpolation_activity_durations_spinner);
         textViewInterpolation = findViewById(R.id.interpolation_activity_interpolation_textview);
     }
 
-    private void configureSpinnerInterpolators()
-    {
+    private void configureSpinnerInterpolators() {
         arrayAdapterForInterpolatorsSpinner = ArrayAdapter.createFromResource(this, R.array.interpolators_array, android.R.layout.simple_spinner_item);
         arrayAdapterForInterpolatorsSpinner.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
@@ -53,68 +49,54 @@ public class InterpolationActivity extends AppCompatActivity
         setSpinnerInterpolatorsListener();
     }
 
-    private void setSpinnerInterpolatorsListener()
-    {
-        spinnerInterpolators.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener()
-        {
+    private void setSpinnerInterpolatorsListener() {
+        spinnerInterpolators.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l)
-            {
+            public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
                 String selectedInterpolatorName = adapterView.getItemAtPosition(position).toString();
                 selectedInterpolator = createInterpolatorForName(selectedInterpolatorName);
-                if (selectedInterpolator != null && selectedDuration > 0)
-                {
+                if (selectedInterpolator != null && selectedDuration > 0) {
                     startTextViewAnimation();
                 }
 
             }
 
             @Override
-            public void onNothingSelected(AdapterView<?> adapterView)
-            {
+            public void onNothingSelected(AdapterView<?> adapterView) {
 
             }
         });
     }
 
-    private Interpolator createInterpolatorForName(String name)
-    {
+    private Interpolator createInterpolatorForName(String name) {
         final String BASE_INTERPOLATOR_CLASS_PATH = "android.view.animation.";
         Interpolator interpolator = null;
-        try
-        {
+        try {
             interpolator = (Interpolator) Class.forName(BASE_INTERPOLATOR_CLASS_PATH + name).newInstance();
-        }
-        catch (Exception e)
-        {
+        } catch (Exception e) {
             e.printStackTrace();
             Log.e(LOG_TAG, "Can not create Interpolator for name: " + name);
         }
         return interpolator;
     }
 
-    private void startTextViewAnimation()
-    {
+    private void startTextViewAnimation() {
         DisplayMetrics displayMetrics = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
         textViewInterpolation.setTranslationY(displayMetrics.heightPixels);
         final int DEFAULT_ANIMATION_START_DELAY = 200;
-        try
-        {
+        try {
             textViewInterpolation.animate().setInterpolator(selectedInterpolator)
                     .setDuration(selectedDuration)
                     .setStartDelay(DEFAULT_ANIMATION_START_DELAY)
                     .translationYBy(-displayMetrics.heightPixels)
                     .start();
-        }
-        catch (Exception e)
-        {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    private void configureSpinnerDurations()
-    {
+    private void configureSpinnerDurations() {
         final int DEFAULT_SPINNER_DURATIONS_SELECTION = 1;
         arrayAdapterForDurationsSpinner = ArrayAdapter.createFromResource(this, R.array.durations_array, android.R.layout.simple_spinner_item);
         arrayAdapterForDurationsSpinner.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -124,26 +106,21 @@ public class InterpolationActivity extends AppCompatActivity
         setSpinnerDurationsListener();
     }
 
-    private void setSpinnerDurationsListener()
-    {
-        spinnerDurations.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener()
-        {
+    private void setSpinnerDurationsListener() {
+        spinnerDurations.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l)
-            {
+            public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
                 String selectionString = adapterView.getItemAtPosition(position).toString();
                 //  use regular expression to get only number from spinner selection
                 String selectionStringOnlyNumbers = selectionString.replaceAll("[^0-9]", "");
                 selectedDuration = Long.valueOf(selectionStringOnlyNumbers);
-                if (selectedInterpolator != null && selectedDuration > 0)
-                {
+                if (selectedInterpolator != null && selectedDuration > 0) {
                     startTextViewAnimation();
                 }
             }
 
             @Override
-            public void onNothingSelected(AdapterView<?> adapterView)
-            {
+            public void onNothingSelected(AdapterView<?> adapterView) {
 
             }
         });

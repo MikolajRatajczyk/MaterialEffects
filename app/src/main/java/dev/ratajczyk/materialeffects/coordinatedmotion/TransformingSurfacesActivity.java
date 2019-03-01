@@ -1,4 +1,4 @@
-package com.ratajczykdev.materialeffects.coordinatedmotion;
+package dev.ratajczyk.materialeffects.coordinatedmotion;
 
 import android.animation.ObjectAnimator;
 import android.os.Bundle;
@@ -9,13 +9,13 @@ import android.view.animation.AnimationUtils;
 import android.view.animation.Interpolator;
 import android.widget.Button;
 
-import com.ratajczykdev.materialeffects.R;
+import dev.ratajczyk.materialeffects.R;
+
 
 /**
  * @author Mikołaj Ratajczyk <mikolaj.ratajczyk@gmail.com>
  */
-public class TransformingSurfacesActivity extends AppCompatActivity
-{
+public class TransformingSurfacesActivity extends AppCompatActivity {
 
     private static final long SHORT_ANIMATION_TIME_IN_MS = 300L;
     private static final long LONG_ANIMATION_TIME_IN_MS = 600L;
@@ -23,34 +23,28 @@ public class TransformingSurfacesActivity extends AppCompatActivity
     private Button buttonReset;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_transforming_surfaces);
 
         cardViewSurface = findViewById(R.id.transforming_surfaces_activity_surface_cardview);
-        cardViewSurface.setOnClickListener(new View.OnClickListener()
-        {
+        cardViewSurface.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view)
-            {
+            public void onClick(View view) {
                 increaseCardSizeWithAnimation();
             }
         });
 
         buttonReset = findViewById(R.id.transforming_surfaces_activity_reset_button);
-        buttonReset.setOnClickListener(new View.OnClickListener()
-        {
+        buttonReset.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view)
-            {
+            public void onClick(View view) {
                 resetSurfaceDimensions();
             }
         });
     }
 
-    private void increaseCardSizeWithAnimation()
-    {
+    private void increaseCardSizeWithAnimation() {
         Interpolator interpolator = AnimationUtils.loadInterpolator(this, android.R.interpolator.bounce);
         final float SCALES_MULTIPLIER = 1.5f;
 
@@ -66,8 +60,7 @@ public class TransformingSurfacesActivity extends AppCompatActivity
         objectAnimatorScaleY.start();
     }
 
-    private void resetSurfaceDimensions()
-    {
+    private void resetSurfaceDimensions() {
         Interpolator interpolator = AnimationUtils.loadInterpolator(this, android.R.interpolator.overshoot);
 
         final float INITIAL_SCALE = 1f;

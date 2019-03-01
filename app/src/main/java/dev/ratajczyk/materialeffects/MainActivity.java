@@ -1,4 +1,4 @@
-package com.ratajczykdev.materialeffects;
+package dev.ratajczyk.materialeffects;
 
 import android.app.ActivityOptions;
 import android.content.Intent;
@@ -7,14 +7,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-import com.ratajczykdev.materialeffects.coordinatedmotion.CoordinatedMotionMenuActivity;
-import com.ratajczykdev.materialeffects.vectors.AnimatedVectorDrawablesMenuActivity;
+import dev.ratajczyk.materialeffects.coordinatedmotion.CoordinatedMotionMenuActivity;
+import dev.ratajczyk.materialeffects.vectors.AnimatedVectorDrawablesMenuActivity;
 
 /**
  * @author Mikołaj Ratajczyk <mikolaj.ratajczyk@gmail.com>
  */
-public class MainActivity extends AppCompatActivity
-{
+public class MainActivity extends AppCompatActivity {
 
     private Button buttonButtons;
     private Button buttonConstraintLayout;
@@ -29,8 +28,7 @@ public class MainActivity extends AppCompatActivity
     private Button buttonAbout;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -38,8 +36,7 @@ public class MainActivity extends AppCompatActivity
         setButtonsListeners();
     }
 
-    private void setButtonsUiReferences()
-    {
+    private void setButtonsUiReferences() {
         buttonButtons = findViewById(R.id.main_activity_buttons_button);
         buttonConstraintLayout = findViewById(R.id.main_activity_constraint_layout_button);
         buttonMotion = findViewById(R.id.main_activity_motion_button);
@@ -53,53 +50,42 @@ public class MainActivity extends AppCompatActivity
         buttonAbout = findViewById(R.id.main_activity_about_button);
     }
 
-    private void setButtonsListeners()
-    {
-        buttonButtons.setOnClickListener(new View.OnClickListener()
-        {
+    private void setButtonsListeners() {
+        buttonButtons.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view)
-            {
+            public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, ButtonsActivity.class);
                 startActivity(intent);
             }
         });
 
-        buttonConstraintLayout.setOnClickListener(new View.OnClickListener()
-        {
+        buttonConstraintLayout.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view)
-            {
+            public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, ConstraintLayoutActivity.class);
                 startActivity(intent);
             }
         });
 
-        buttonMotion.setOnClickListener(new View.OnClickListener()
-        {
+        buttonMotion.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view)
-            {
+            public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, MotionActivity.class);
                 startActivity(intent);
             }
         });
 
-        buttonScenes.setOnClickListener(new View.OnClickListener()
-        {
+        buttonScenes.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view)
-            {
+            public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, ScenesActivity.class);
                 startActivity(intent);
             }
         });
 
-        buttonContentTransitions.setOnClickListener(new View.OnClickListener()
-        {
+        buttonContentTransitions.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view)
-            {
+            public void onClick(View view) {
 
                 Intent intent = new Intent(MainActivity.this, ContentTransitionsActivity.class);
                 Bundle bundle = ActivityOptions.makeSceneTransitionAnimation(MainActivity.this).toBundle();
@@ -108,61 +94,49 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
-        buttonSharedElementTransitions.setOnClickListener(new View.OnClickListener()
-        {
+        buttonSharedElementTransitions.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view)
-            {
+            public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, SharedElementTransitionsFirstActivity.class);
                 startActivity(intent);
             }
         });
 
-        buttonInterpolation.setOnClickListener(new View.OnClickListener()
-        {
+        buttonInterpolation.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view)
-            {
+            public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, InterpolationActivity.class);
                 startActivity(intent);
             }
         });
 
-        buttonCoordinatedMotion.setOnClickListener(new View.OnClickListener()
-        {
+        buttonCoordinatedMotion.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view)
-            {
+            public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, CoordinatedMotionMenuActivity.class);
                 startActivity(intent);
             }
         });
 
-        buttonVector.setOnClickListener(new View.OnClickListener()
-        {
+        buttonVector.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view)
-            {
+            public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, AnimatedVectorDrawablesMenuActivity.class);
                 startActivity(intent);
             }
         });
 
-        buttonInstructiveMotion.setOnClickListener(new View.OnClickListener()
-        {
+        buttonInstructiveMotion.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view)
-            {
+            public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, InstructiveMotionActivity.class);
                 startActivity(intent);
             }
         });
 
-        buttonAbout.setOnClickListener(new View.OnClickListener()
-        {
+        buttonAbout.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view)
-            {
+            public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, AboutActivity.class);
                 //  to start content transition in AboutActivity
                 Bundle bundle = ActivityOptions.makeSceneTransitionAnimation(MainActivity.this).toBundle();

@@ -1,4 +1,4 @@
-package com.ratajczykdev.materialeffects;
+package dev.ratajczyk.materialeffects;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -11,8 +11,7 @@ import android.widget.TextView;
 /**
  * @author Mikołaj Ratajczyk <mikolaj.ratajczyk@gmail.com>
  */
-public class AboutActivity extends AppCompatActivity
-{
+public class AboutActivity extends AppCompatActivity {
     private static final int EXPLODE_TRANSITION_DURATION_IN_MS = 1000;
     private ImageView imageViewStar;
     private TextView textViewCreatedBy;
@@ -20,8 +19,7 @@ public class AboutActivity extends AppCompatActivity
     private TextView textViewEmail;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
 
@@ -43,15 +41,12 @@ public class AboutActivity extends AppCompatActivity
         setEasterEgg();
     }
 
-    private void setEasterEgg()
-    {
+    private void setEasterEgg() {
         final int FULL_ROTATION_IN_DEGREES = 360;
         final int ROTATION_ANIMATION_DURATION_IN_MS = 5000;
-        imageViewStar.setOnLongClickListener(new View.OnLongClickListener()
-        {
+        imageViewStar.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
-            public boolean onLongClick(View view)
-            {
+            public boolean onLongClick(View view) {
                 imageViewStar.animate()
                         .rotation(imageViewStar.getRotation() + FULL_ROTATION_IN_DEGREES)
                         .setInterpolator(AnimationUtils.loadInterpolator(AboutActivity.this, android.R.interpolator.bounce))

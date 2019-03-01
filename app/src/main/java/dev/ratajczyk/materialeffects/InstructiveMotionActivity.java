@@ -1,4 +1,4 @@
-package com.ratajczykdev.materialeffects;
+package dev.ratajczyk.materialeffects;
 
 import android.animation.Animator;
 import android.animation.ObjectAnimator;
@@ -9,13 +9,11 @@ import android.widget.ScrollView;
 /**
  * @author Mikołaj Ratajczyk <mikolaj.ratajczyk@gmail.com>
  */
-public class InstructiveMotionActivity extends AppCompatActivity
-{
+public class InstructiveMotionActivity extends AppCompatActivity {
     private ScrollView scrollView;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_instructive_motion);
 
@@ -23,8 +21,7 @@ public class InstructiveMotionActivity extends AppCompatActivity
     }
 
     @Override
-    public void onEnterAnimationComplete()
-    {
+    public void onEnterAnimationComplete() {
         //  when window transition ends
         super.onEnterAnimationComplete();
         final int startScrollPosition = getResources().getDimensionPixelSize(R.dimen.init_scroll_up_distance);

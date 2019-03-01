@@ -1,4 +1,4 @@
-package com.ratajczykdev.materialeffects.vectors;
+package dev.ratajczyk.materialeffects.vectors;
 
 
 import android.graphics.drawable.AnimatedVectorDrawable;
@@ -7,21 +7,20 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.ratajczykdev.materialeffects.R;
+import dev.ratajczyk.materialeffects.R;
+
 
 /**
  * @author Mikołaj Ratajczyk <mikolaj.ratajczyk@gmail.com>
  */
-public class AnimatedPathActivity extends AppCompatActivity
-{
+public class AnimatedPathActivity extends AppCompatActivity {
     private ImageView imageViewAnimatedItem;
     private AnimatedVectorDrawable avdCrossToTick;
     private AnimatedVectorDrawable avdTickToCross;
     private boolean isTick;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_animated_path);
 
@@ -31,39 +30,31 @@ public class AnimatedPathActivity extends AppCompatActivity
         resetAnimatedVectorDrawables();
 
         imageViewAnimatedItem = findViewById(R.id.animated_path_activity_animated_item_imageview);
-        imageViewAnimatedItem.setOnClickListener(new View.OnClickListener()
-        {
+        imageViewAnimatedItem.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view)
-            {
+            public void onClick(View view) {
                 animateAvd();
             }
         });
 
     }
 
-    private void resetAnimatedVectorDrawables()
-    {
-        if (avdCrossToTick != null)
-        {
+    private void resetAnimatedVectorDrawables() {
+        if (avdCrossToTick != null) {
             avdCrossToTick.reset();
         }
-        if (avdTickToCross != null)
-        {
+        if (avdTickToCross != null) {
             avdTickToCross.reset();
         }
     }
 
-    private void animateAvd()
-    {
+    private void animateAvd() {
         //  when activity starts for the first time this condition is always true
-        if (!isTick)
-        {
+        if (!isTick) {
             imageViewAnimatedItem.setImageDrawable(avdCrossToTick);
             avdCrossToTick.start();
             isTick = true;
-        } else if (isTick)
-        {
+        } else if (isTick) {
             imageViewAnimatedItem.setImageDrawable(avdTickToCross);
             avdTickToCross.start();
             isTick = false;

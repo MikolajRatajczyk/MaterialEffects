@@ -1,4 +1,4 @@
-package com.ratajczykdev.materialeffects;
+package dev.ratajczyk.materialeffects;
 
 import android.os.Bundle;
 import android.support.constraint.ConstraintLayout;
@@ -16,8 +16,7 @@ import android.widget.Toast;
 /**
  * @author Mikołaj Ratajczyk <mikolaj.ratajczyk@gmail.com>
  */
-public class ConstraintLayoutActivity extends AppCompatActivity
-{
+public class ConstraintLayoutActivity extends AppCompatActivity {
 
     private Spinner spinnerVisibilityChanger;
     private Group groupItems;
@@ -27,8 +26,7 @@ public class ConstraintLayoutActivity extends AppCompatActivity
 
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_constraint_layout);
 
@@ -36,19 +34,16 @@ public class ConstraintLayoutActivity extends AppCompatActivity
 
         configureSpinner();
 
-        buttonChangeContent.setOnClickListener(new View.OnClickListener()
-        {
+        buttonChangeContent.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view)
-            {
+            public void onClick(View view) {
                 TransitionManager.beginDelayedTransition(constraintLayoutPlaceholderRoot);
                 placeholder.setContentId(view.getId());
             }
         });
     }
 
-    private void setUiElementsReferences()
-    {
+    private void setUiElementsReferences() {
         constraintLayoutPlaceholderRoot = findViewById(R.id.constraint_layout_activity_placeholder_space_view);
         groupItems = findViewById(R.id.constraint_layout_activity_items_group);
         spinnerVisibilityChanger = findViewById(R.id.constraint_layout_activity_visibility_spinner);
@@ -56,39 +51,31 @@ public class ConstraintLayoutActivity extends AppCompatActivity
         placeholder = findViewById(R.id.placeholder_image_template_main_item);
     }
 
-    private void configureSpinner()
-    {
+    private void configureSpinner() {
         setSpinnerAdapter();
         setSpinnerListener();
     }
 
-    private void setSpinnerAdapter()
-    {
+    private void setSpinnerAdapter() {
         ArrayAdapter<CharSequence> spinnerArrayAdapter = ArrayAdapter.createFromResource(this, R.array.visibility_array, android.R.layout.simple_spinner_item);
         spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerVisibilityChanger.setAdapter(spinnerArrayAdapter);
     }
 
-    private void setSpinnerListener()
-    {
-        spinnerVisibilityChanger.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener()
-        {
+    private void setSpinnerListener() {
+        spinnerVisibilityChanger.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
-            {
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 String selectedVisibilityString = parent.getItemAtPosition(position).toString();
-                if (selectedVisibilityString.equals("VISIBLE"))
-                {
+                if (selectedVisibilityString.equals("VISIBLE")) {
                     groupItems.setVisibility(View.VISIBLE);
-                } else if (selectedVisibilityString.equals("GONE"))
-                {
+                } else if (selectedVisibilityString.equals("GONE")) {
                     groupItems.setVisibility(View.GONE);
                 }
             }
 
             @Override
-            public void onNothingSelected(AdapterView<?> adapterView)
-            {
+            public void onNothingSelected(AdapterView<?> adapterView) {
                 Toast.makeText(ConstraintLayoutActivity.this, getString(R.string.toast_nothing_was_chosen), Toast.LENGTH_SHORT).show();
             }
         });

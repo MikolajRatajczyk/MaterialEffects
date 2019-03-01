@@ -1,4 +1,4 @@
-package com.ratajczykdev.materialeffects;
+package dev.ratajczyk.materialeffects;
 
 import android.os.Bundle;
 import android.support.constraint.ConstraintLayout;
@@ -12,15 +12,13 @@ import android.widget.Button;
 /**
  * @author Mikołaj Ratajczyk <mikolaj.ratajczyk@gmail.com>
  */
-public class MotionActivity extends AppCompatActivity
-{
+public class MotionActivity extends AppCompatActivity {
     private Button buttonSlide;
     private Button buttonReset;
     private ConstraintLayout constraintLayoutRoot;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_motion);
 
@@ -30,20 +28,16 @@ public class MotionActivity extends AppCompatActivity
         setButtonResetListener();
     }
 
-    private void setUiElementsReferences()
-    {
+    private void setUiElementsReferences() {
         constraintLayoutRoot = findViewById(R.id.activity_motion_root);
         buttonSlide = findViewById(R.id.motion_activity_slide_button);
         buttonReset = findViewById(R.id.motion_activity_reset_button);
     }
 
-    private void setButtonSlideListener()
-    {
-        buttonSlide.setOnClickListener(new View.OnClickListener()
-        {
+    private void setButtonSlideListener() {
+        buttonSlide.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view)
-            {
+            public void onClick(View view) {
                 Slide slide = new Slide();
                 slide.setSlideEdge(Gravity.TOP);
 
@@ -53,13 +47,10 @@ public class MotionActivity extends AppCompatActivity
         });
     }
 
-    private void setButtonResetListener()
-    {
-        buttonReset.setOnClickListener(new View.OnClickListener()
-        {
+    private void setButtonResetListener() {
+        buttonReset.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view)
-            {
+            public void onClick(View view) {
                 buttonSlide.setVisibility(View.VISIBLE);
 
                 Slide slide = new Slide();
